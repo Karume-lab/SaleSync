@@ -454,3 +454,5 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+**/FileContentIndex/*.vsidx
