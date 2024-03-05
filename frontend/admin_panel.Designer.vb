@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class admin_panel
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class admin_panel
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -32,12 +32,8 @@ Partial Class admin_panel
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerateSalesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.All_entities1 = New frontend.all_entities()
         Me.MenuStrip1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -46,7 +42,7 @@ Partial Class admin_panel
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StaffToolStripMenuItem, Me.ProductsToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(995, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -54,7 +50,7 @@ Partial Class admin_panel
         '
         Me.StaffToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewToolStripMenuItem, Me.ListAllToolStripMenuItem})
         Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
-        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(54, 24)
+        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(54, 26)
         Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'AddNewToolStripMenuItem
@@ -73,7 +69,7 @@ Partial Class admin_panel
         '
         Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewToolStripMenuItem1, Me.ListAllToolStripMenuItem1})
         Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
-        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
+        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(80, 26)
         Me.ProductsToolStripMenuItem.Text = "Products"
         '
         'AddNewToolStripMenuItem1
@@ -85,14 +81,14 @@ Partial Class admin_panel
         'ListAllToolStripMenuItem1
         '
         Me.ListAllToolStripMenuItem1.Name = "ListAllToolStripMenuItem1"
-        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(154, 26)
+        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
         Me.ListAllToolStripMenuItem1.Text = "View All"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerateSalesReportToolStripMenuItem, Me.ViewAllToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 26)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'GenerateSalesReportToolStripMenuItem
@@ -107,55 +103,28 @@ Partial Class admin_panel
         Me.ViewAllToolStripMenuItem.Size = New System.Drawing.Size(239, 26)
         Me.ViewAllToolStripMenuItem.Text = "View All"
         '
-        'Panel1
+        'All_entities1
         '
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 31)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(777, 412)
-        Me.Panel1.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(22, 62)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(741, 335)
-        Me.Panel2.TabIndex = 4
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(683, 13)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(80, 43)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(22, 13)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(655, 43)
-        Me.TextBox1.TabIndex = 2
+        Me.All_entities1.BackColor = System.Drawing.SystemColors.Control
+        Me.All_entities1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.All_entities1.Location = New System.Drawing.Point(0, 30)
+        Me.All_entities1.Name = "All_entities1"
+        Me.All_entities1.Size = New System.Drawing.Size(995, 404)
+        Me.All_entities1.TabIndex = 1
         '
         'admin_panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.Panel1)
+        Me.ClientSize = New System.Drawing.Size(995, 434)
+        Me.Controls.Add(Me.All_entities1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "admin_panel"
         Me.Text = "Admin Panel"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -171,8 +140,5 @@ Partial Class admin_panel
     Friend WithEvents ListAllToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents GenerateSalesReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewAllToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents All_entities1 As all_entities
 End Class

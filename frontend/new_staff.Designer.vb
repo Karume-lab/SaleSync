@@ -170,6 +170,7 @@ Partial Class new_staff
         Me.Controls.Add(Me.Panel1)
         Me.MaximumSize = New System.Drawing.Size(409, 396)
         Me.Name = "new_staff"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Register Staff"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -150,6 +150,7 @@ Partial Class new_product
         Me.ClientSize = New System.Drawing.Size(331, 438)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "new_product"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Add Product"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

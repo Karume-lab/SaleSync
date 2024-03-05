@@ -127,10 +127,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="all_entities.Designer.vb">
+      <DependentUpon>all_entities.vb</DependentUpon>
+    </Compile>
+    <Compile Include="all_entities.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="admin_panel.resx">
       <DependentUpon>admin_panel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="all_entities.resx">
+      <DependentUpon>all_entities.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.vb</DependentUpon>
