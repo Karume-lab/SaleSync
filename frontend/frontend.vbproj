@@ -86,6 +86,12 @@
     <Compile Include="admin_panel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="new_product.Designer.vb">
+      <DependentUpon>new_product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="new_product.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="new_staff.Designer.vb">
       <DependentUpon>new_staff.vb</DependentUpon>
     </Compile>
@@ -137,6 +143,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_product.resx">
+      <DependentUpon>new_product.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new_staff.resx">
       <DependentUpon>new_staff.vb</DependentUpon>

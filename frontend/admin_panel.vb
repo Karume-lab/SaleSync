@@ -24,4 +24,10 @@
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
     End Sub
+
+    Private Sub AddNewToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles AddNewToolStripMenuItem1.Click
+        Show()
+        Dim add_product As New new_product
+        add_product.ShowDialog()
+    End Sub
 End Class

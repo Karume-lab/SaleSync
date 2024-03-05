@@ -24,18 +24,18 @@ Partial Class admin_panel
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.StaffToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddNewToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListAllToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerateSalesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,31 +57,24 @@ Partial Class admin_panel
         Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(54, 24)
         Me.StaffToolStripMenuItem.Text = "Staff"
         '
+        'AddNewToolStripMenuItem
+        '
+        Me.AddNewToolStripMenuItem.Name = "AddNewToolStripMenuItem"
+        Me.AddNewToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
+        Me.AddNewToolStripMenuItem.Text = "Add New"
+        '
+        'ListAllToolStripMenuItem
+        '
+        Me.ListAllToolStripMenuItem.Name = "ListAllToolStripMenuItem"
+        Me.ListAllToolStripMenuItem.Size = New System.Drawing.Size(154, 26)
+        Me.ListAllToolStripMenuItem.Text = "View All"
+        '
         'ProductsToolStripMenuItem
         '
         Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewToolStripMenuItem1, Me.ListAllToolStripMenuItem1})
         Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
         Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.ProductsToolStripMenuItem.Text = "Products"
-        '
-        'ReportsToolStripMenuItem
-        '
-        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerateSalesReportToolStripMenuItem, Me.ViewAllToolStripMenuItem})
-        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
-        Me.ReportsToolStripMenuItem.Text = "Reports"
-        '
-        'AddNewToolStripMenuItem
-        '
-        Me.AddNewToolStripMenuItem.Name = "AddNewToolStripMenuItem"
-        Me.AddNewToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.AddNewToolStripMenuItem.Text = "Add New"
-        '
-        'ListAllToolStripMenuItem
-        '
-        Me.ListAllToolStripMenuItem.Name = "ListAllToolStripMenuItem"
-        Me.ListAllToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.ListAllToolStripMenuItem.Text = "View All"
         '
         'AddNewToolStripMenuItem1
         '
@@ -92,8 +85,15 @@ Partial Class admin_panel
         'ListAllToolStripMenuItem1
         '
         Me.ListAllToolStripMenuItem1.Name = "ListAllToolStripMenuItem1"
-        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(154, 26)
         Me.ListAllToolStripMenuItem1.Text = "View All"
+        '
+        'ReportsToolStripMenuItem
+        '
+        Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerateSalesReportToolStripMenuItem, Me.ViewAllToolStripMenuItem})
+        Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'GenerateSalesReportToolStripMenuItem
         '
@@ -117,30 +117,30 @@ Partial Class admin_panel
         Me.Panel1.Size = New System.Drawing.Size(777, 412)
         Me.Panel1.TabIndex = 1
         '
-        'TextBox1
+        'Panel2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(22, 13)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(655, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(22, 62)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(741, 335)
+        Me.Panel2.TabIndex = 4
         '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(683, 13)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(80, 22)
+        Me.Button1.Size = New System.Drawing.Size(80, 43)
         Me.Button1.TabIndex = 3
         Me.Button1.Text = "Search"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Panel2
+        'TextBox1
         '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(22, 41)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(741, 356)
-        Me.Panel2.TabIndex = 4
+        Me.TextBox1.Location = New System.Drawing.Point(22, 13)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(655, 43)
+        Me.TextBox1.TabIndex = 2
         '
         'admin_panel
         '
