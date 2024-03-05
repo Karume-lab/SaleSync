@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class new_staff
+Partial Class edit_product
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,88 +23,78 @@ Partial Class new_staff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.Button2)
+        Me.Panel1.Controls.Add(Me.TextBox2)
+        Me.Panel1.Controls.Add(Me.RichTextBox1)
         Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.TextBox3)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(337, 345)
-        Me.Panel1.TabIndex = 1
+        Me.Panel1.Size = New System.Drawing.Size(331, 438)
+        Me.Panel1.TabIndex = 3
         '
-        'Label6
+        'TextBox2
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(172, 196)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(144, 16)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Password Confirmation"
+        Me.TextBox2.Location = New System.Drawing.Point(240, 311)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(72, 22)
+        Me.TextBox2.TabIndex = 11
         '
-        'TextBox5
+        'RichTextBox1
         '
-        Me.TextBox5.Location = New System.Drawing.Point(175, 224)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(136, 22)
-        Me.TextBox5.TabIndex = 10
+        Me.RichTextBox1.Location = New System.Drawing.Point(18, 173)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(294, 98)
+        Me.RichTextBox1.TabIndex = 10
+        Me.RichTextBox1.Text = ""
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(172, 86)
+        Me.Label5.Location = New System.Drawing.Point(15, 133)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(72, 16)
+        Me.Label5.Size = New System.Drawing.Size(75, 16)
         Me.Label5.TabIndex = 9
-        Me.Label5.Text = "Last Name"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(175, 105)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(136, 22)
-        Me.TextBox4.TabIndex = 8
+        Me.Label5.Text = "Description"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(15, 86)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 16)
+        Me.Label4.Size = New System.Drawing.Size(44, 16)
         Me.Label4.TabIndex = 7
-        Me.Label4.Text = "First Name"
+        Me.Label4.Text = "Name"
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(18, 105)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(136, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(294, 22)
         Me.TextBox3.TabIndex = 6
         '
         'Label3
@@ -113,66 +103,71 @@ Partial Class new_staff
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(18, 12)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(290, 38)
+        Me.Label3.Size = New System.Drawing.Size(195, 38)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Register New Staff"
+        Me.Label3.Text = "Edit Product"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 196)
+        Me.Label2.Location = New System.Drawing.Point(237, 292)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 16)
+        Me.Label2.Size = New System.Drawing.Size(55, 16)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Password"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(18, 224)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.Label2.Text = "Quantity"
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(107, 275)
+        Me.Button1.Location = New System.Drawing.Point(189, 361)
         Me.Button1.MaximumSize = New System.Drawing.Size(122, 35)
         Me.Button1.MinimumSize = New System.Drawing.Size(122, 35)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(122, 35)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "REGISTER"
+        Me.Button1.Text = "SAVE"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 137)
+        Me.Label1.Location = New System.Drawing.Point(15, 292)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 16)
+        Me.Label1.Size = New System.Drawing.Size(38, 16)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Email"
+        Me.Label1.Text = "Price"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(18, 156)
+        Me.TextBox1.Location = New System.Drawing.Point(18, 311)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(293, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(72, 22)
         Me.TextBox1.TabIndex = 0
         '
-        'new_staff
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(18, 361)
+        Me.Button2.MaximumSize = New System.Drawing.Size(122, 35)
+        Me.Button2.MinimumSize = New System.Drawing.Size(122, 35)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 35)
+        Me.Button2.TabIndex = 13
+        Me.Button2.Text = "DELETE"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'edit_product
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(337, 345)
+        Me.ClientSize = New System.Drawing.Size(331, 438)
         Me.Controls.Add(Me.Panel1)
-        Me.MaximumSize = New System.Drawing.Size(355, 392)
-        Me.MinimumSize = New System.Drawing.Size(355, 392)
-        Me.Name = "new_staff"
+        Me.MaximumSize = New System.Drawing.Size(349, 485)
+        Me.MinimumSize = New System.Drawing.Size(349, 485)
+        Me.Name = "edit_product"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Register Staff"
+        Me.Text = "Edit Product"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -180,16 +175,15 @@ Partial Class new_staff
     End Sub
 
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents RichTextBox1 As RichTextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Button2 As Button
 End Class

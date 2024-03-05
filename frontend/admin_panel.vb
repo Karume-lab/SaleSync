@@ -6,11 +6,12 @@
     End Sub
 
     Private Sub ListAllToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ListAllToolStripMenuItem1.Click
-        All_entities1.Visible = True
+        Product_list1.Visible = True
     End Sub
 
     Private Sub ListAllToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ListAllToolStripMenuItem.Click
-        All_entities1.Visible = True
+        Staff_list1.Visible = True
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs)
@@ -18,7 +19,8 @@
     End Sub
 
     Private Sub admin_panel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        All_entities1.Visible = False
+        Staff_list1.Visible = False
+        Product_list1.Visible = False
     End Sub
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs)
@@ -40,6 +42,14 @@
     End Sub
 
     Private Sub All_entities1_Load(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub All_entities1_Load_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Staff_list1_Load(sender As Object, e As EventArgs) Handles Staff_list1.Load
 
     End Sub
 End Class

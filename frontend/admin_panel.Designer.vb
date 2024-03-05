@@ -32,7 +32,8 @@ Partial Class admin_panel
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GenerateSalesReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.All_entities1 = New frontend.all_entities()
+        Me.Staff_list1 = New frontend.staff_list()
+        Me.Product_list1 = New frontend.product_list()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -42,7 +43,7 @@ Partial Class admin_panel
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StaffToolStripMenuItem, Me.ProductsToolStripMenuItem, Me.ReportsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(995, 30)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1214, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -50,7 +51,7 @@ Partial Class admin_panel
         '
         Me.StaffToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewToolStripMenuItem, Me.ListAllToolStripMenuItem})
         Me.StaffToolStripMenuItem.Name = "StaffToolStripMenuItem"
-        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(54, 26)
+        Me.StaffToolStripMenuItem.Size = New System.Drawing.Size(54, 24)
         Me.StaffToolStripMenuItem.Text = "Staff"
         '
         'AddNewToolStripMenuItem
@@ -69,26 +70,26 @@ Partial Class admin_panel
         '
         Me.ProductsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddNewToolStripMenuItem1, Me.ListAllToolStripMenuItem1})
         Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
-        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(80, 26)
+        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(80, 24)
         Me.ProductsToolStripMenuItem.Text = "Products"
         '
         'AddNewToolStripMenuItem1
         '
         Me.AddNewToolStripMenuItem1.Name = "AddNewToolStripMenuItem1"
-        Me.AddNewToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.AddNewToolStripMenuItem1.Size = New System.Drawing.Size(154, 26)
         Me.AddNewToolStripMenuItem1.Text = "Add New"
         '
         'ListAllToolStripMenuItem1
         '
         Me.ListAllToolStripMenuItem1.Name = "ListAllToolStripMenuItem1"
-        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.ListAllToolStripMenuItem1.Size = New System.Drawing.Size(154, 26)
         Me.ListAllToolStripMenuItem1.Text = "View All"
         '
         'ReportsToolStripMenuItem
         '
         Me.ReportsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.GenerateSalesReportToolStripMenuItem, Me.ViewAllToolStripMenuItem})
         Me.ReportsToolStripMenuItem.Name = "ReportsToolStripMenuItem"
-        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 26)
+        Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
         'GenerateSalesReportToolStripMenuItem
@@ -103,22 +104,30 @@ Partial Class admin_panel
         Me.ViewAllToolStripMenuItem.Size = New System.Drawing.Size(239, 26)
         Me.ViewAllToolStripMenuItem.Text = "View All"
         '
-        'All_entities1
+        'Staff_list1
         '
-        Me.All_entities1.BackColor = System.Drawing.SystemColors.Control
-        Me.All_entities1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.All_entities1.Location = New System.Drawing.Point(0, 30)
-        Me.All_entities1.Name = "All_entities1"
-        Me.All_entities1.Size = New System.Drawing.Size(995, 404)
-        Me.All_entities1.TabIndex = 1
+        Me.Staff_list1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Staff_list1.Location = New System.Drawing.Point(0, 0)
+        Me.Staff_list1.Name = "Staff_list1"
+        Me.Staff_list1.Size = New System.Drawing.Size(1214, 601)
+        Me.Staff_list1.TabIndex = 2
+        '
+        'Product_list1
+        '
+        Me.Product_list1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Product_list1.Location = New System.Drawing.Point(0, 28)
+        Me.Product_list1.Name = "Product_list1"
+        Me.Product_list1.Size = New System.Drawing.Size(1214, 573)
+        Me.Product_list1.TabIndex = 3
         '
         'admin_panel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(995, 434)
-        Me.Controls.Add(Me.All_entities1)
+        Me.ClientSize = New System.Drawing.Size(1214, 601)
+        Me.Controls.Add(Me.Product_list1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Staff_list1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "admin_panel"
         Me.Text = "Admin Panel"
@@ -140,5 +149,6 @@ Partial Class admin_panel
     Friend WithEvents ListAllToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents GenerateSalesReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ViewAllToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents All_entities1 As all_entities
+    Friend WithEvents Staff_list1 As staff_list
+    Friend WithEvents Product_list1 As product_list
 End Class

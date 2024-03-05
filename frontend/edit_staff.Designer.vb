@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class new_staff
+Partial Class edit_staff
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -23,8 +23,8 @@ Partial Class new_staff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -32,7 +32,6 @@ Partial Class new_staff
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
@@ -41,8 +40,8 @@ Partial Class new_staff
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.TextBox5)
+        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label5)
         Me.Panel1.Controls.Add(Me.TextBox4)
         Me.Panel1.Controls.Add(Me.Label4)
@@ -50,30 +49,37 @@ Partial Class new_staff
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.TextBox1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(337, 345)
-        Me.Panel1.TabIndex = 1
+        Me.Panel1.TabIndex = 2
         '
-        'Label6
+        'Button1
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(172, 196)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(144, 16)
-        Me.Label6.TabIndex = 11
-        Me.Label6.Text = "Password Confirmation"
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(18, 278)
+        Me.Button1.MaximumSize = New System.Drawing.Size(122, 35)
+        Me.Button1.MinimumSize = New System.Drawing.Size(122, 35)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(122, 35)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "DELETE"
+        Me.Button1.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'Button3
         '
-        Me.TextBox5.Location = New System.Drawing.Point(175, 224)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(136, 22)
-        Me.TextBox5.TabIndex = 10
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(186, 278)
+        Me.Button3.MaximumSize = New System.Drawing.Size(122, 35)
+        Me.Button3.MinimumSize = New System.Drawing.Size(122, 35)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(122, 35)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "SAVE"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -113,15 +119,15 @@ Partial Class new_staff
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(18, 12)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(290, 38)
+        Me.Label3.Size = New System.Drawing.Size(149, 38)
         Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Register New Staff"
+        Me.Label3.Text = "Edit Staff"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 196)
+        Me.Label2.Location = New System.Drawing.Point(15, 184)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 16)
         Me.Label2.TabIndex = 4
@@ -129,22 +135,10 @@ Partial Class new_staff
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(18, 224)
+        Me.TextBox2.Location = New System.Drawing.Point(18, 212)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(136, 22)
         Me.TextBox2.TabIndex = 3
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(107, 275)
-        Me.Button1.MaximumSize = New System.Drawing.Size(122, 35)
-        Me.Button1.MinimumSize = New System.Drawing.Size(122, 35)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(122, 35)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "REGISTER"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -162,7 +156,7 @@ Partial Class new_staff
         Me.TextBox1.Size = New System.Drawing.Size(293, 22)
         Me.TextBox1.TabIndex = 0
         '
-        'new_staff
+        'edit_staff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -170,26 +164,24 @@ Partial Class new_staff
         Me.Controls.Add(Me.Panel1)
         Me.MaximumSize = New System.Drawing.Size(355, 392)
         Me.MinimumSize = New System.Drawing.Size(355, 392)
-        Me.Name = "new_staff"
+        Me.Name = "edit_staff"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Register Staff"
+        Me.Text = "Edit Staff"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents TextBox2 As TextBox
 End Class

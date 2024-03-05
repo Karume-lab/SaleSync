@@ -86,6 +86,18 @@
     <Compile Include="admin_panel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="edit_staff.Designer.vb">
+      <DependentUpon>edit_staff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="edit_staff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit_product.Designer.vb">
+      <DependentUpon>edit_product.vb</DependentUpon>
+    </Compile>
+    <Compile Include="edit_product.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="new_product.Designer.vb">
       <DependentUpon>new_product.vb</DependentUpon>
     </Compile>
@@ -127,10 +139,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="all_entities.Designer.vb">
-      <DependentUpon>all_entities.vb</DependentUpon>
+    <Compile Include="search_bar.Designer.vb">
+      <DependentUpon>search_bar.vb</DependentUpon>
     </Compile>
-    <Compile Include="all_entities.vb">
+    <Compile Include="search_bar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="staff_list.Designer.vb">
+      <DependentUpon>staff_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="staff_list.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="product_list.Designer.vb">
+      <DependentUpon>product_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="product_list.vb">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
@@ -138,11 +162,17 @@
     <EmbeddedResource Include="admin_panel.resx">
       <DependentUpon>admin_panel.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="all_entities.resx">
-      <DependentUpon>all_entities.vb</DependentUpon>
+    <EmbeddedResource Include="search_bar.resx">
+      <DependentUpon>search_bar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="checkout.resx">
       <DependentUpon>checkout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_product.resx">
+      <DependentUpon>edit_product.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit_staff.resx">
+      <DependentUpon>edit_staff.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.vb</DependentUpon>
@@ -159,8 +189,14 @@
     <EmbeddedResource Include="new_staff.resx">
       <DependentUpon>new_staff.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="product_list.resx">
+      <DependentUpon>product_list.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="splash_screen.resx">
       <DependentUpon>splash_screen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff_list.resx">
+      <DependentUpon>staff_list.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
