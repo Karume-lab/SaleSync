@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("frontend")>
+<Assembly: AssemblyTitle("SaleSync")>
 <Assembly: AssemblyDescription("")>
 <Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("frontend")>
+<Assembly: AssemblyProduct("SaleSync")>
 <Assembly: AssemblyCopyright("Copyright ©  2024")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("125d580f-0121-473a-a1fb-699514ce1fb4")>
+<Assembly: Guid("a5db9a5c-883e-40ca-ac9b-899694f99ded")>
 
 ' Version information for an assembly consists of the following four values:
 '

@@ -1,0 +1,2 @@
+replace search text with a search icon
+add an assets folder
