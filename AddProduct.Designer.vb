@@ -23,156 +23,50 @@ Partial Class AddProduct
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.AddProductPanel = New System.Windows.Forms.Panel()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.QuantityLabel = New System.Windows.Forms.Label()
-        Me.ProductPriceLabel = New System.Windows.Forms.Label()
-        Me.ProductDescriptionLabel = New System.Windows.Forms.Label()
-        Me.ProductNameLabel = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.SaveProductButton = New System.Windows.Forms.Button()
+        Me.AddProductButtonsPanel = New System.Windows.Forms.Panel()
         Me.CancelProductButton = New System.Windows.Forms.Button()
-        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.SaveProductButton = New System.Windows.Forms.Button()
+        Me.ProductQuantityPanel = New System.Windows.Forms.Panel()
+        Me.QuantityLabel = New System.Windows.Forms.Label()
+        Me.ProductQuantityTextbox = New System.Windows.Forms.TextBox()
+        Me.ProductPricePanel = New System.Windows.Forms.Panel()
+        Me.ProductPriceLabel = New System.Windows.Forms.Label()
+        Me.ProductPriceTextBox = New System.Windows.Forms.TextBox()
+        Me.ProductDescriptionPanel = New System.Windows.Forms.Panel()
+        Me.ProductDescriptionLabel = New System.Windows.Forms.Label()
+        Me.ProductDescriptionTextBox = New System.Windows.Forms.TextBox()
+        Me.ProductNamePanel = New System.Windows.Forms.Panel()
+        Me.ProductNameLabel = New System.Windows.Forms.Label()
+        Me.ProductNameTextbox = New System.Windows.Forms.TextBox()
         Me.AddProductPanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
+        Me.AddProductButtonsPanel.SuspendLayout()
+        Me.ProductQuantityPanel.SuspendLayout()
+        Me.ProductPricePanel.SuspendLayout()
+        Me.ProductDescriptionPanel.SuspendLayout()
+        Me.ProductNamePanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'AddProductPanel
         '
-        Me.AddProductPanel.Controls.Add(Me.Panel5)
-        Me.AddProductPanel.Controls.Add(Me.Panel4)
-        Me.AddProductPanel.Controls.Add(Me.Panel3)
-        Me.AddProductPanel.Controls.Add(Me.Panel2)
-        Me.AddProductPanel.Controls.Add(Me.Panel1)
+        Me.AddProductPanel.Controls.Add(Me.AddProductButtonsPanel)
+        Me.AddProductPanel.Controls.Add(Me.ProductQuantityPanel)
+        Me.AddProductPanel.Controls.Add(Me.ProductPricePanel)
+        Me.AddProductPanel.Controls.Add(Me.ProductDescriptionPanel)
+        Me.AddProductPanel.Controls.Add(Me.ProductNamePanel)
         Me.AddProductPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AddProductPanel.Location = New System.Drawing.Point(0, 0)
         Me.AddProductPanel.Name = "AddProductPanel"
         Me.AddProductPanel.Size = New System.Drawing.Size(284, 303)
         Me.AddProductPanel.TabIndex = 0
         '
-        'TextBox4
+        'AddProductButtonsPanel
         '
-        Me.TextBox4.Location = New System.Drawing.Point(14, 19)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(197, 78)
-        Me.TextBox4.TabIndex = 8
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(20, 19)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox3.TabIndex = 7
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(17, 19)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 22)
-        Me.TextBox2.TabIndex = 6
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(14, 19)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(184, 22)
-        Me.TextBox1.TabIndex = 5
-        '
-        'QuantityLabel
-        '
-        Me.QuantityLabel.AutoSize = True
-        Me.QuantityLabel.Location = New System.Drawing.Point(17, 0)
-        Me.QuantityLabel.Name = "QuantityLabel"
-        Me.QuantityLabel.Size = New System.Drawing.Size(55, 16)
-        Me.QuantityLabel.TabIndex = 3
-        Me.QuantityLabel.Text = "Quantity"
-        '
-        'ProductPriceLabel
-        '
-        Me.ProductPriceLabel.AutoSize = True
-        Me.ProductPriceLabel.Location = New System.Drawing.Point(11, 0)
-        Me.ProductPriceLabel.Name = "ProductPriceLabel"
-        Me.ProductPriceLabel.Size = New System.Drawing.Size(38, 16)
-        Me.ProductPriceLabel.TabIndex = 2
-        Me.ProductPriceLabel.Text = "Price"
-        '
-        'ProductDescriptionLabel
-        '
-        Me.ProductDescriptionLabel.AutoSize = True
-        Me.ProductDescriptionLabel.Location = New System.Drawing.Point(11, 0)
-        Me.ProductDescriptionLabel.Name = "ProductDescriptionLabel"
-        Me.ProductDescriptionLabel.Size = New System.Drawing.Size(75, 16)
-        Me.ProductDescriptionLabel.TabIndex = 1
-        Me.ProductDescriptionLabel.Text = "Description"
-        '
-        'ProductNameLabel
-        '
-        Me.ProductNameLabel.AutoSize = True
-        Me.ProductNameLabel.Location = New System.Drawing.Point(11, 0)
-        Me.ProductNameLabel.Name = "ProductNameLabel"
-        Me.ProductNameLabel.Size = New System.Drawing.Size(44, 16)
-        Me.ProductNameLabel.TabIndex = 0
-        Me.ProductNameLabel.Text = "Name"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.ProductNameLabel)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(284, 41)
-        Me.Panel1.TabIndex = 9
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.ProductDescriptionLabel)
-        Me.Panel2.Controls.Add(Me.TextBox4)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel2.Location = New System.Drawing.Point(0, 41)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(284, 100)
-        Me.Panel2.TabIndex = 10
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.ProductPriceLabel)
-        Me.Panel3.Controls.Add(Me.TextBox2)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 141)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(284, 46)
-        Me.Panel3.TabIndex = 11
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.QuantityLabel)
-        Me.Panel4.Controls.Add(Me.TextBox3)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel4.Location = New System.Drawing.Point(0, 187)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(284, 46)
-        Me.Panel4.TabIndex = 12
-        '
-        'SaveProductButton
-        '
-        Me.SaveProductButton.Dock = System.Windows.Forms.DockStyle.Right
-        Me.SaveProductButton.Location = New System.Drawing.Point(191, 0)
-        Me.SaveProductButton.Name = "SaveProductButton"
-        Me.SaveProductButton.Size = New System.Drawing.Size(75, 33)
-        Me.SaveProductButton.TabIndex = 13
-        Me.SaveProductButton.Text = "Save"
-        Me.SaveProductButton.UseVisualStyleBackColor = True
+        Me.AddProductButtonsPanel.Controls.Add(Me.CancelProductButton)
+        Me.AddProductButtonsPanel.Controls.Add(Me.SaveProductButton)
+        Me.AddProductButtonsPanel.Location = New System.Drawing.Point(12, 260)
+        Me.AddProductButtonsPanel.Name = "AddProductButtonsPanel"
+        Me.AddProductButtonsPanel.Size = New System.Drawing.Size(266, 33)
+        Me.AddProductButtonsPanel.TabIndex = 15
         '
         'CancelProductButton
         '
@@ -184,14 +78,120 @@ Partial Class AddProduct
         Me.CancelProductButton.Text = "Cancel"
         Me.CancelProductButton.UseVisualStyleBackColor = True
         '
-        'Panel5
+        'SaveProductButton
         '
-        Me.Panel5.Controls.Add(Me.CancelProductButton)
-        Me.Panel5.Controls.Add(Me.SaveProductButton)
-        Me.Panel5.Location = New System.Drawing.Point(12, 260)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(266, 33)
-        Me.Panel5.TabIndex = 15
+        Me.SaveProductButton.Dock = System.Windows.Forms.DockStyle.Right
+        Me.SaveProductButton.Location = New System.Drawing.Point(191, 0)
+        Me.SaveProductButton.Name = "SaveProductButton"
+        Me.SaveProductButton.Size = New System.Drawing.Size(75, 33)
+        Me.SaveProductButton.TabIndex = 13
+        Me.SaveProductButton.Text = "Save"
+        Me.SaveProductButton.UseVisualStyleBackColor = True
+        '
+        'ProductQuantityPanel
+        '
+        Me.ProductQuantityPanel.Controls.Add(Me.QuantityLabel)
+        Me.ProductQuantityPanel.Controls.Add(Me.ProductQuantityTextbox)
+        Me.ProductQuantityPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ProductQuantityPanel.Location = New System.Drawing.Point(0, 187)
+        Me.ProductQuantityPanel.Name = "ProductQuantityPanel"
+        Me.ProductQuantityPanel.Size = New System.Drawing.Size(284, 46)
+        Me.ProductQuantityPanel.TabIndex = 12
+        '
+        'QuantityLabel
+        '
+        Me.QuantityLabel.AutoSize = True
+        Me.QuantityLabel.Location = New System.Drawing.Point(17, 0)
+        Me.QuantityLabel.Name = "QuantityLabel"
+        Me.QuantityLabel.Size = New System.Drawing.Size(55, 16)
+        Me.QuantityLabel.TabIndex = 3
+        Me.QuantityLabel.Text = "Quantity"
+        '
+        'ProductQuantityTextbox
+        '
+        Me.ProductQuantityTextbox.Location = New System.Drawing.Point(20, 19)
+        Me.ProductQuantityTextbox.Name = "ProductQuantityTextbox"
+        Me.ProductQuantityTextbox.Size = New System.Drawing.Size(100, 22)
+        Me.ProductQuantityTextbox.TabIndex = 7
+        '
+        'ProductPricePanel
+        '
+        Me.ProductPricePanel.Controls.Add(Me.ProductPriceLabel)
+        Me.ProductPricePanel.Controls.Add(Me.ProductPriceTextBox)
+        Me.ProductPricePanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ProductPricePanel.Location = New System.Drawing.Point(0, 141)
+        Me.ProductPricePanel.Name = "ProductPricePanel"
+        Me.ProductPricePanel.Size = New System.Drawing.Size(284, 46)
+        Me.ProductPricePanel.TabIndex = 11
+        '
+        'ProductPriceLabel
+        '
+        Me.ProductPriceLabel.AutoSize = True
+        Me.ProductPriceLabel.Location = New System.Drawing.Point(11, 0)
+        Me.ProductPriceLabel.Name = "ProductPriceLabel"
+        Me.ProductPriceLabel.Size = New System.Drawing.Size(38, 16)
+        Me.ProductPriceLabel.TabIndex = 2
+        Me.ProductPriceLabel.Text = "Price"
+        '
+        'ProductPriceTextBox
+        '
+        Me.ProductPriceTextBox.Location = New System.Drawing.Point(17, 19)
+        Me.ProductPriceTextBox.Name = "ProductPriceTextBox"
+        Me.ProductPriceTextBox.Size = New System.Drawing.Size(100, 22)
+        Me.ProductPriceTextBox.TabIndex = 6
+        '
+        'ProductDescriptionPanel
+        '
+        Me.ProductDescriptionPanel.Controls.Add(Me.ProductDescriptionLabel)
+        Me.ProductDescriptionPanel.Controls.Add(Me.ProductDescriptionTextBox)
+        Me.ProductDescriptionPanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ProductDescriptionPanel.Location = New System.Drawing.Point(0, 41)
+        Me.ProductDescriptionPanel.Name = "ProductDescriptionPanel"
+        Me.ProductDescriptionPanel.Size = New System.Drawing.Size(284, 100)
+        Me.ProductDescriptionPanel.TabIndex = 10
+        '
+        'ProductDescriptionLabel
+        '
+        Me.ProductDescriptionLabel.AutoSize = True
+        Me.ProductDescriptionLabel.Location = New System.Drawing.Point(11, 0)
+        Me.ProductDescriptionLabel.Name = "ProductDescriptionLabel"
+        Me.ProductDescriptionLabel.Size = New System.Drawing.Size(75, 16)
+        Me.ProductDescriptionLabel.TabIndex = 1
+        Me.ProductDescriptionLabel.Text = "Description"
+        '
+        'ProductDescriptionTextBox
+        '
+        Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(14, 19)
+        Me.ProductDescriptionTextBox.Multiline = True
+        Me.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox"
+        Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(197, 78)
+        Me.ProductDescriptionTextBox.TabIndex = 8
+        '
+        'ProductNamePanel
+        '
+        Me.ProductNamePanel.Controls.Add(Me.ProductNameLabel)
+        Me.ProductNamePanel.Controls.Add(Me.ProductNameTextbox)
+        Me.ProductNamePanel.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ProductNamePanel.Location = New System.Drawing.Point(0, 0)
+        Me.ProductNamePanel.Name = "ProductNamePanel"
+        Me.ProductNamePanel.Size = New System.Drawing.Size(284, 41)
+        Me.ProductNamePanel.TabIndex = 9
+        '
+        'ProductNameLabel
+        '
+        Me.ProductNameLabel.AutoSize = True
+        Me.ProductNameLabel.Location = New System.Drawing.Point(11, 0)
+        Me.ProductNameLabel.Name = "ProductNameLabel"
+        Me.ProductNameLabel.Size = New System.Drawing.Size(44, 16)
+        Me.ProductNameLabel.TabIndex = 0
+        Me.ProductNameLabel.Text = "Name"
+        '
+        'ProductNameTextbox
+        '
+        Me.ProductNameTextbox.Location = New System.Drawing.Point(14, 17)
+        Me.ProductNameTextbox.Name = "ProductNameTextbox"
+        Me.ProductNameTextbox.Size = New System.Drawing.Size(184, 22)
+        Me.ProductNameTextbox.TabIndex = 5
         '
         'AddProduct
         '
@@ -202,15 +202,15 @@ Partial Class AddProduct
         Me.Name = "AddProduct"
         Me.Text = "Add Product"
         Me.AddProductPanel.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
+        Me.AddProductButtonsPanel.ResumeLayout(False)
+        Me.ProductQuantityPanel.ResumeLayout(False)
+        Me.ProductQuantityPanel.PerformLayout()
+        Me.ProductPricePanel.ResumeLayout(False)
+        Me.ProductPricePanel.PerformLayout()
+        Me.ProductDescriptionPanel.ResumeLayout(False)
+        Me.ProductDescriptionPanel.PerformLayout()
+        Me.ProductNamePanel.ResumeLayout(False)
+        Me.ProductNamePanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -220,15 +220,15 @@ Partial Class AddProduct
     Friend WithEvents ProductPriceLabel As Label
     Friend WithEvents ProductDescriptionLabel As Label
     Friend WithEvents ProductNameLabel As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ProductDescriptionTextBox As TextBox
+    Friend WithEvents ProductQuantityTextbox As TextBox
+    Friend WithEvents ProductPriceTextBox As TextBox
+    Friend WithEvents ProductNameTextbox As TextBox
+    Friend WithEvents ProductNamePanel As Panel
+    Friend WithEvents ProductPricePanel As Panel
+    Friend WithEvents ProductDescriptionPanel As Panel
     Friend WithEvents CancelProductButton As Button
     Friend WithEvents SaveProductButton As Button
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel5 As Panel
+    Friend WithEvents ProductQuantityPanel As Panel
+    Friend WithEvents AddProductButtonsPanel As Panel
 End Class
