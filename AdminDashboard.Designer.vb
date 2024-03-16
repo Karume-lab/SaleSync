@@ -281,6 +281,7 @@ Partial Class AdminDashboard
         Me.Controls.Add(Me.AdminTabControl)
         Me.Name = "AdminDashboard"
         Me.Text = "ADMIN DASHBOARD"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.AdminTabControl.ResumeLayout(False)
         Me.ProductsTab.ResumeLayout(False)
         Me.AdminBody.ResumeLayout(False)
