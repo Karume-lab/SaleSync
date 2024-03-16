@@ -63,9 +63,10 @@ Partial Class AddProduct
         '
         Me.AddProductButtonsPanel.Controls.Add(Me.CancelProductButton)
         Me.AddProductButtonsPanel.Controls.Add(Me.SaveProductButton)
-        Me.AddProductButtonsPanel.Location = New System.Drawing.Point(12, 260)
+        Me.AddProductButtonsPanel.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.AddProductButtonsPanel.Location = New System.Drawing.Point(0, 270)
         Me.AddProductButtonsPanel.Name = "AddProductButtonsPanel"
-        Me.AddProductButtonsPanel.Size = New System.Drawing.Size(266, 33)
+        Me.AddProductButtonsPanel.Size = New System.Drawing.Size(284, 33)
         Me.AddProductButtonsPanel.TabIndex = 15
         '
         'CancelProductButton
@@ -81,7 +82,7 @@ Partial Class AddProduct
         'SaveProductButton
         '
         Me.SaveProductButton.Dock = System.Windows.Forms.DockStyle.Right
-        Me.SaveProductButton.Location = New System.Drawing.Point(191, 0)
+        Me.SaveProductButton.Location = New System.Drawing.Point(209, 0)
         Me.SaveProductButton.Name = "SaveProductButton"
         Me.SaveProductButton.Size = New System.Drawing.Size(75, 33)
         Me.SaveProductButton.TabIndex = 13
