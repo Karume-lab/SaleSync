@@ -26,22 +26,35 @@ Partial Class AdminDashboard
         Me.ProductsTab = New System.Windows.Forms.TabPage()
         Me.AdminBody = New System.Windows.Forms.Panel()
         Me.ProductList = New System.Windows.Forms.DataGridView()
-        Me.AdminSideMenu = New System.Windows.Forms.Panel()
+        Me.ProductsAdminSidePanel = New System.Windows.Forms.Panel()
         Me.AdminSidebarButtons = New System.Windows.Forms.Panel()
         Me.AddProduct = New System.Windows.Forms.Button()
         Me.ListProducts = New System.Windows.Forms.Button()
-        Me.AdminSearchBar = New System.Windows.Forms.Panel()
-        Me.AdminSearchButton = New System.Windows.Forms.Button()
-        Me.AdminSearchInput = New System.Windows.Forms.TextBox()
+        Me.ProductsSearchBar = New System.Windows.Forms.Panel()
+        Me.ProductsSearchButton = New System.Windows.Forms.Button()
+        Me.ProductsSearchInput = New System.Windows.Forms.TextBox()
         Me.StaffTab = New System.Windows.Forms.TabPage()
+        Me.StaffList = New System.Windows.Forms.DataGridView()
+        Me.StaffAdminSidePanel = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.AddStaff = New System.Windows.Forms.Button()
+        Me.ListStaff = New System.Windows.Forms.Button()
+        Me.StaffSearchBar = New System.Windows.Forms.Panel()
+        Me.StaffSearchButton = New System.Windows.Forms.Button()
+        Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
         CType(Me.ProductList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.AdminSideMenu.SuspendLayout()
+        Me.ProductsAdminSidePanel.SuspendLayout()
         Me.AdminSidebarButtons.SuspendLayout()
-        Me.AdminSearchBar.SuspendLayout()
+        Me.ProductsSearchBar.SuspendLayout()
+        Me.StaffTab.SuspendLayout()
+        CType(Me.StaffList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StaffAdminSidePanel.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.StaffSearchBar.SuspendLayout()
         Me.SuspendLayout()
         '
         'AdminTabControl
@@ -59,8 +72,8 @@ Partial Class AdminDashboard
         'ProductsTab
         '
         Me.ProductsTab.Controls.Add(Me.AdminBody)
-        Me.ProductsTab.Controls.Add(Me.AdminSideMenu)
-        Me.ProductsTab.Controls.Add(Me.AdminSearchBar)
+        Me.ProductsTab.Controls.Add(Me.ProductsAdminSidePanel)
+        Me.ProductsTab.Controls.Add(Me.ProductsSearchBar)
         Me.ProductsTab.Location = New System.Drawing.Point(4, 25)
         Me.ProductsTab.Name = "ProductsTab"
         Me.ProductsTab.Padding = New System.Windows.Forms.Padding(3)
@@ -88,14 +101,14 @@ Partial Class AdminDashboard
         Me.ProductList.Size = New System.Drawing.Size(559, 374)
         Me.ProductList.TabIndex = 0
         '
-        'AdminSideMenu
+        'ProductsAdminSidePanel
         '
-        Me.AdminSideMenu.Controls.Add(Me.AdminSidebarButtons)
-        Me.AdminSideMenu.Dock = System.Windows.Forms.DockStyle.Left
-        Me.AdminSideMenu.Location = New System.Drawing.Point(3, 33)
-        Me.AdminSideMenu.Name = "AdminSideMenu"
-        Me.AdminSideMenu.Size = New System.Drawing.Size(216, 385)
-        Me.AdminSideMenu.TabIndex = 2
+        Me.ProductsAdminSidePanel.Controls.Add(Me.AdminSidebarButtons)
+        Me.ProductsAdminSidePanel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.ProductsAdminSidePanel.Location = New System.Drawing.Point(3, 33)
+        Me.ProductsAdminSidePanel.Name = "ProductsAdminSidePanel"
+        Me.ProductsAdminSidePanel.Size = New System.Drawing.Size(216, 385)
+        Me.ProductsAdminSidePanel.TabIndex = 2
         '
         'AdminSidebarButtons
         '
@@ -127,38 +140,41 @@ Partial Class AdminDashboard
         Me.ListProducts.Text = "List of Products"
         Me.ListProducts.UseVisualStyleBackColor = True
         '
-        'AdminSearchBar
+        'ProductsSearchBar
         '
-        Me.AdminSearchBar.Controls.Add(Me.AdminSearchButton)
-        Me.AdminSearchBar.Controls.Add(Me.AdminSearchInput)
-        Me.AdminSearchBar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.AdminSearchBar.Location = New System.Drawing.Point(3, 3)
-        Me.AdminSearchBar.Name = "AdminSearchBar"
-        Me.AdminSearchBar.Size = New System.Drawing.Size(786, 30)
-        Me.AdminSearchBar.TabIndex = 1
+        Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchButton)
+        Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchInput)
+        Me.ProductsSearchBar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ProductsSearchBar.Location = New System.Drawing.Point(3, 3)
+        Me.ProductsSearchBar.Name = "ProductsSearchBar"
+        Me.ProductsSearchBar.Size = New System.Drawing.Size(786, 30)
+        Me.ProductsSearchBar.TabIndex = 1
         '
-        'AdminSearchButton
+        'ProductsSearchButton
         '
-        Me.AdminSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ProductsSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AdminSearchButton.Location = New System.Drawing.Point(444, 3)
-        Me.AdminSearchButton.Name = "AdminSearchButton"
-        Me.AdminSearchButton.Size = New System.Drawing.Size(100, 23)
-        Me.AdminSearchButton.TabIndex = 0
-        Me.AdminSearchButton.Text = "SEARCH"
-        Me.AdminSearchButton.UseVisualStyleBackColor = True
+        Me.ProductsSearchButton.Location = New System.Drawing.Point(444, 3)
+        Me.ProductsSearchButton.Name = "ProductsSearchButton"
+        Me.ProductsSearchButton.Size = New System.Drawing.Size(100, 23)
+        Me.ProductsSearchButton.TabIndex = 0
+        Me.ProductsSearchButton.Text = "SEARCH"
+        Me.ProductsSearchButton.UseVisualStyleBackColor = True
         '
-        'AdminSearchInput
+        'ProductsSearchInput
         '
-        Me.AdminSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.ProductsSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.AdminSearchInput.Location = New System.Drawing.Point(225, 3)
-        Me.AdminSearchInput.Name = "AdminSearchInput"
-        Me.AdminSearchInput.Size = New System.Drawing.Size(213, 22)
-        Me.AdminSearchInput.TabIndex = 0
+        Me.ProductsSearchInput.Location = New System.Drawing.Point(225, 3)
+        Me.ProductsSearchInput.Name = "ProductsSearchInput"
+        Me.ProductsSearchInput.Size = New System.Drawing.Size(213, 22)
+        Me.ProductsSearchInput.TabIndex = 0
         '
         'StaffTab
         '
+        Me.StaffTab.Controls.Add(Me.StaffList)
+        Me.StaffTab.Controls.Add(Me.StaffAdminSidePanel)
+        Me.StaffTab.Controls.Add(Me.StaffSearchBar)
         Me.StaffTab.Location = New System.Drawing.Point(4, 25)
         Me.StaffTab.Name = "StaffTab"
         Me.StaffTab.Padding = New System.Windows.Forms.Padding(3)
@@ -166,6 +182,86 @@ Partial Class AdminDashboard
         Me.StaffTab.TabIndex = 1
         Me.StaffTab.Text = "STAFF"
         Me.StaffTab.UseVisualStyleBackColor = True
+        '
+        'StaffList
+        '
+        Me.StaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StaffList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.StaffList.Location = New System.Drawing.Point(219, 33)
+        Me.StaffList.Name = "StaffList"
+        Me.StaffList.RowHeadersWidth = 51
+        Me.StaffList.RowTemplate.Height = 24
+        Me.StaffList.Size = New System.Drawing.Size(570, 385)
+        Me.StaffList.TabIndex = 3
+        '
+        'StaffAdminSidePanel
+        '
+        Me.StaffAdminSidePanel.Controls.Add(Me.Panel2)
+        Me.StaffAdminSidePanel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.StaffAdminSidePanel.Location = New System.Drawing.Point(3, 33)
+        Me.StaffAdminSidePanel.Name = "StaffAdminSidePanel"
+        Me.StaffAdminSidePanel.Size = New System.Drawing.Size(216, 385)
+        Me.StaffAdminSidePanel.TabIndex = 5
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.AddStaff)
+        Me.Panel2.Controls.Add(Me.ListStaff)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(216, 74)
+        Me.Panel2.TabIndex = 0
+        '
+        'AddStaff
+        '
+        Me.AddStaff.Dock = System.Windows.Forms.DockStyle.Top
+        Me.AddStaff.Location = New System.Drawing.Point(0, 35)
+        Me.AddStaff.Name = "AddStaff"
+        Me.AddStaff.Size = New System.Drawing.Size(216, 36)
+        Me.AddStaff.TabIndex = 1
+        Me.AddStaff.Text = "Add Staff"
+        Me.AddStaff.UseVisualStyleBackColor = True
+        '
+        'ListStaff
+        '
+        Me.ListStaff.Dock = System.Windows.Forms.DockStyle.Top
+        Me.ListStaff.Location = New System.Drawing.Point(0, 0)
+        Me.ListStaff.Name = "ListStaff"
+        Me.ListStaff.Size = New System.Drawing.Size(216, 35)
+        Me.ListStaff.TabIndex = 0
+        Me.ListStaff.Text = "List of Staff"
+        Me.ListStaff.UseVisualStyleBackColor = True
+        '
+        'StaffSearchBar
+        '
+        Me.StaffSearchBar.Controls.Add(Me.StaffSearchButton)
+        Me.StaffSearchBar.Controls.Add(Me.StaffSearchInput)
+        Me.StaffSearchBar.Dock = System.Windows.Forms.DockStyle.Top
+        Me.StaffSearchBar.Location = New System.Drawing.Point(3, 3)
+        Me.StaffSearchBar.Name = "StaffSearchBar"
+        Me.StaffSearchBar.Size = New System.Drawing.Size(786, 30)
+        Me.StaffSearchBar.TabIndex = 4
+        '
+        'StaffSearchButton
+        '
+        Me.StaffSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.StaffSearchButton.Location = New System.Drawing.Point(444, 3)
+        Me.StaffSearchButton.Name = "StaffSearchButton"
+        Me.StaffSearchButton.Size = New System.Drawing.Size(100, 23)
+        Me.StaffSearchButton.TabIndex = 0
+        Me.StaffSearchButton.Text = "SEARCH"
+        Me.StaffSearchButton.UseVisualStyleBackColor = True
+        '
+        'StaffSearchInput
+        '
+        Me.StaffSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.StaffSearchInput.Location = New System.Drawing.Point(225, 3)
+        Me.StaffSearchInput.Name = "StaffSearchInput"
+        Me.StaffSearchInput.Size = New System.Drawing.Size(213, 22)
+        Me.StaffSearchInput.TabIndex = 0
         '
         'ReportsTab
         '
@@ -189,10 +285,16 @@ Partial Class AdminDashboard
         Me.ProductsTab.ResumeLayout(False)
         Me.AdminBody.ResumeLayout(False)
         CType(Me.ProductList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.AdminSideMenu.ResumeLayout(False)
+        Me.ProductsAdminSidePanel.ResumeLayout(False)
         Me.AdminSidebarButtons.ResumeLayout(False)
-        Me.AdminSearchBar.ResumeLayout(False)
-        Me.AdminSearchBar.PerformLayout()
+        Me.ProductsSearchBar.ResumeLayout(False)
+        Me.ProductsSearchBar.PerformLayout()
+        Me.StaffTab.ResumeLayout(False)
+        CType(Me.StaffList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StaffAdminSidePanel.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.StaffSearchBar.ResumeLayout(False)
+        Me.StaffSearchBar.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -201,13 +303,21 @@ Partial Class AdminDashboard
     Friend WithEvents ProductsTab As TabPage
     Friend WithEvents StaffTab As TabPage
     Friend WithEvents ReportsTab As TabPage
-    Friend WithEvents AdminSearchBar As Panel
-    Friend WithEvents AdminSearchInput As TextBox
+    Friend WithEvents ProductsSearchBar As Panel
+    Friend WithEvents ProductsSearchInput As TextBox
     Friend WithEvents AdminBody As Panel
-    Friend WithEvents AdminSideMenu As Panel
-    Friend WithEvents AdminSearchButton As Button
+    Friend WithEvents ProductsAdminSidePanel As Panel
+    Friend WithEvents ProductsSearchButton As Button
     Friend WithEvents AdminSidebarButtons As Panel
     Friend WithEvents ListProducts As Button
     Friend WithEvents AddProduct As Button
     Friend WithEvents ProductList As DataGridView
+    Friend WithEvents StaffList As DataGridView
+    Friend WithEvents StaffAdminSidePanel As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents AddStaff As Button
+    Friend WithEvents ListStaff As Button
+    Friend WithEvents StaffSearchBar As Panel
+    Friend WithEvents StaffSearchButton As Button
+    Friend WithEvents StaffSearchInput As TextBox
 End Class
