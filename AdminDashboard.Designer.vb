@@ -94,11 +94,12 @@ Partial Class AdminDashboard
         'ProductList
         '
         Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ProductList.Location = New System.Drawing.Point(6, 6)
+        Me.ProductList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ProductList.Location = New System.Drawing.Point(0, 0)
         Me.ProductList.Name = "ProductList"
         Me.ProductList.RowHeadersWidth = 51
         Me.ProductList.RowTemplate.Height = 24
-        Me.ProductList.Size = New System.Drawing.Size(559, 374)
+        Me.ProductList.Size = New System.Drawing.Size(570, 385)
         Me.ProductList.TabIndex = 0
         '
         'ProductsAdminSidePanel
