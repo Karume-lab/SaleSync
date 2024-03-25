@@ -456,3 +456,4 @@ FodyWeavers.xsd
 *.sln.iml
 
 **/FileContentIndex/*.vsidx
+bin/
