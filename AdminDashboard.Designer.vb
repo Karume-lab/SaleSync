@@ -66,7 +66,7 @@ Partial Class AdminDashboard
         Me.AdminTabControl.Location = New System.Drawing.Point(0, 0)
         Me.AdminTabControl.Name = "AdminTabControl"
         Me.AdminTabControl.SelectedIndex = 0
-        Me.AdminTabControl.Size = New System.Drawing.Size(800, 450)
+        Me.AdminTabControl.Size = New System.Drawing.Size(846, 464)
         Me.AdminTabControl.TabIndex = 0
         '
         'ProductsTab
@@ -77,7 +77,7 @@ Partial Class AdminDashboard
         Me.ProductsTab.Location = New System.Drawing.Point(4, 25)
         Me.ProductsTab.Name = "ProductsTab"
         Me.ProductsTab.Padding = New System.Windows.Forms.Padding(3)
-        Me.ProductsTab.Size = New System.Drawing.Size(792, 421)
+        Me.ProductsTab.Size = New System.Drawing.Size(838, 435)
         Me.ProductsTab.TabIndex = 0
         Me.ProductsTab.Text = "PRODUCTS"
         Me.ProductsTab.UseVisualStyleBackColor = True
@@ -88,7 +88,7 @@ Partial Class AdminDashboard
         Me.AdminBody.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AdminBody.Location = New System.Drawing.Point(219, 33)
         Me.AdminBody.Name = "AdminBody"
-        Me.AdminBody.Size = New System.Drawing.Size(570, 385)
+        Me.AdminBody.Size = New System.Drawing.Size(616, 399)
         Me.AdminBody.TabIndex = 3
         '
         'ProductList
@@ -107,7 +107,7 @@ Partial Class AdminDashboard
         Me.ProductsAdminSidePanel.Dock = System.Windows.Forms.DockStyle.Left
         Me.ProductsAdminSidePanel.Location = New System.Drawing.Point(3, 33)
         Me.ProductsAdminSidePanel.Name = "ProductsAdminSidePanel"
-        Me.ProductsAdminSidePanel.Size = New System.Drawing.Size(216, 385)
+        Me.ProductsAdminSidePanel.Size = New System.Drawing.Size(216, 399)
         Me.ProductsAdminSidePanel.TabIndex = 2
         '
         'AdminSidebarButtons
@@ -147,7 +147,7 @@ Partial Class AdminDashboard
         Me.ProductsSearchBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.ProductsSearchBar.Location = New System.Drawing.Point(3, 3)
         Me.ProductsSearchBar.Name = "ProductsSearchBar"
-        Me.ProductsSearchBar.Size = New System.Drawing.Size(786, 30)
+        Me.ProductsSearchBar.Size = New System.Drawing.Size(832, 30)
         Me.ProductsSearchBar.TabIndex = 1
         '
         'ProductsSearchButton
@@ -156,7 +156,7 @@ Partial Class AdminDashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProductsSearchButton.Location = New System.Drawing.Point(444, 3)
         Me.ProductsSearchButton.Name = "ProductsSearchButton"
-        Me.ProductsSearchButton.Size = New System.Drawing.Size(100, 23)
+        Me.ProductsSearchButton.Size = New System.Drawing.Size(146, 23)
         Me.ProductsSearchButton.TabIndex = 0
         Me.ProductsSearchButton.Text = "SEARCH"
         Me.ProductsSearchButton.UseVisualStyleBackColor = True
@@ -167,7 +167,7 @@ Partial Class AdminDashboard
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProductsSearchInput.Location = New System.Drawing.Point(225, 3)
         Me.ProductsSearchInput.Name = "ProductsSearchInput"
-        Me.ProductsSearchInput.Size = New System.Drawing.Size(213, 22)
+        Me.ProductsSearchInput.Size = New System.Drawing.Size(259, 22)
         Me.ProductsSearchInput.TabIndex = 0
         '
         'StaffTab
@@ -277,7 +277,7 @@ Partial Class AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(846, 464)
         Me.Controls.Add(Me.AdminTabControl)
         Me.Name = "AdminDashboard"
         Me.Text = "ADMIN DASHBOARD"
