@@ -69,10 +69,10 @@ Partial Class AdminDashboard
         Me.StaffNameTextBox = New System.Windows.Forms.TextBox()
         Me.AddStaff = New System.Windows.Forms.Button()
         Me.ListStaffButton = New System.Windows.Forms.Button()
-        Me.StaffSearchBar = New System.Windows.Forms.Panel()
-        Me.StaffSearchButton = New System.Windows.Forms.Button()
-        Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
+        Me.StaffSearchBar = New System.Windows.Forms.Panel()
+        Me.StaffSearchInput = New System.Windows.Forms.TextBox()
+        Me.StaffSearchButton = New System.Windows.Forms.Button()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
@@ -339,10 +339,10 @@ Partial Class AdminDashboard
         '
         Me.ProductsSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductsSearchButton.Location = New System.Drawing.Point(269, 4)
+        Me.ProductsSearchButton.Location = New System.Drawing.Point(303, 4)
         Me.ProductsSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchButton.Name = "ProductsSearchButton"
-        Me.ProductsSearchButton.Size = New System.Drawing.Size(319, 23)
+        Me.ProductsSearchButton.Size = New System.Drawing.Size(89, 23)
         Me.ProductsSearchButton.TabIndex = 0
         Me.ProductsSearchButton.Text = "SEARCH"
         Me.ProductsSearchButton.UseVisualStyleBackColor = True
@@ -351,10 +351,10 @@ Partial Class AdminDashboard
         '
         Me.ProductsSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductsSearchInput.Location = New System.Drawing.Point(7, 5)
+        Me.ProductsSearchInput.Location = New System.Drawing.Point(16, 8)
         Me.ProductsSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchInput.Name = "ProductsSearchInput"
-        Me.ProductsSearchInput.Size = New System.Drawing.Size(431, 22)
+        Me.ProductsSearchInput.Size = New System.Drawing.Size(270, 22)
         Me.ProductsSearchInput.TabIndex = 0
         '
         'StaffTab
@@ -563,6 +563,17 @@ Partial Class AdminDashboard
         Me.ListStaffButton.Text = "List of Staff"
         Me.ListStaffButton.UseVisualStyleBackColor = True
         '
+        'ReportsTab
+        '
+        Me.ReportsTab.Location = New System.Drawing.Point(4, 25)
+        Me.ReportsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ReportsTab.Name = "ReportsTab"
+        Me.ReportsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ReportsTab.Size = New System.Drawing.Size(1011, 435)
+        Me.ReportsTab.TabIndex = 2
+        Me.ReportsTab.Text = "REPORTS"
+        Me.ReportsTab.UseVisualStyleBackColor = True
+        '
         'StaffSearchBar
         '
         Me.StaffSearchBar.Controls.Add(Me.StaffSearchButton)
@@ -574,38 +585,23 @@ Partial Class AdminDashboard
         Me.StaffSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.StaffSearchBar.TabIndex = 4
         '
+        'StaffSearchInput
+        '
+        Me.StaffSearchInput.Location = New System.Drawing.Point(5, 2)
+        Me.StaffSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.StaffSearchInput.Name = "StaffSearchInput"
+        Me.StaffSearchInput.Size = New System.Drawing.Size(293, 22)
+        Me.StaffSearchInput.TabIndex = 0
+        '
         'StaffSearchButton
         '
-        Me.StaffSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StaffSearchButton.Location = New System.Drawing.Point(444, 2)
+        Me.StaffSearchButton.Location = New System.Drawing.Point(344, 2)
         Me.StaffSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffSearchButton.Name = "StaffSearchButton"
-        Me.StaffSearchButton.Size = New System.Drawing.Size(318, 23)
+        Me.StaffSearchButton.Size = New System.Drawing.Size(104, 22)
         Me.StaffSearchButton.TabIndex = 0
         Me.StaffSearchButton.Text = "SEARCH"
         Me.StaffSearchButton.UseVisualStyleBackColor = True
-        '
-        'StaffSearchInput
-        '
-        Me.StaffSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StaffSearchInput.Location = New System.Drawing.Point(225, 2)
-        Me.StaffSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.StaffSearchInput.Name = "StaffSearchInput"
-        Me.StaffSearchInput.Size = New System.Drawing.Size(431, 22)
-        Me.StaffSearchInput.TabIndex = 0
-        '
-        'ReportsTab
-        '
-        Me.ReportsTab.Location = New System.Drawing.Point(4, 25)
-        Me.ReportsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ReportsTab.Name = "ReportsTab"
-        Me.ReportsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ReportsTab.Size = New System.Drawing.Size(1011, 435)
-        Me.ReportsTab.TabIndex = 2
-        Me.ReportsTab.Text = "REPORTS"
-        Me.ReportsTab.UseVisualStyleBackColor = True
         '
         'AdminDashboard
         '
@@ -647,9 +643,6 @@ Partial Class AdminDashboard
     Friend WithEvents StaffAdminSidePanel As Panel
     Friend WithEvents AddStaff As Button
     Friend WithEvents ListStaffButton As Button
-    Friend WithEvents StaffSearchBar As Panel
-    Friend WithEvents StaffSearchButton As Button
-    Friend WithEvents StaffSearchInput As TextBox
     Friend WithEvents ListProducts As Button
     Friend WithEvents UpdateProductButton As Button
     Friend WithEvents ProductNameTextBox As TextBox
@@ -686,4 +679,7 @@ Partial Class AdminDashboard
     Friend WithEvents empty As DataGridViewTextBoxColumn
     Friend WithEvents ProductEditButton As DataGridViewButtonColumn
     Friend WithEvents ProductDeleteButton As DataGridViewButtonColumn
+    Friend WithEvents StaffSearchBar As Panel
+    Friend WithEvents StaffSearchButton As Button
+    Friend WithEvents StaffSearchInput As TextBox
 End Class
