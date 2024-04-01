@@ -77,4 +77,8 @@ Public Class LoginForm
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub LoginEmailTextBox_Click(sender As Object, e As EventArgs) Handles LoginEmailTextBox.Click
+
+    End Sub
 End Class

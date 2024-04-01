@@ -22,126 +22,125 @@ Partial Class LoginForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.LoginPanel = New System.Windows.Forms.Panel()
-        Me.LoginPasswordPanel = New System.Windows.Forms.Panel()
         Me.LoginPasswordTextBox = New System.Windows.Forms.Label()
         Me.PasswordTextBox = New System.Windows.Forms.TextBox()
-        Me.LoginEmailPanel = New System.Windows.Forms.Panel()
         Me.LoginEmailTextBox = New System.Windows.Forms.Label()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.LoginButton = New System.Windows.Forms.Button()
-        Me.LoginPanel.SuspendLayout()
-        Me.LoginPasswordPanel.SuspendLayout()
-        Me.LoginEmailPanel.SuspendLayout()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'LoginPanel
-        '
-        Me.LoginPanel.Controls.Add(Me.LoginPasswordPanel)
-        Me.LoginPanel.Controls.Add(Me.LoginEmailPanel)
-        Me.LoginPanel.Location = New System.Drawing.Point(9, 10)
-        Me.LoginPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.LoginPanel.Name = "LoginPanel"
-        Me.LoginPanel.Size = New System.Drawing.Size(154, 75)
-        Me.LoginPanel.TabIndex = 0
-        '
-        'LoginPasswordPanel
-        '
-        Me.LoginPasswordPanel.Controls.Add(Me.LoginPasswordTextBox)
-        Me.LoginPasswordPanel.Controls.Add(Me.PasswordTextBox)
-        Me.LoginPasswordPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LoginPasswordPanel.Location = New System.Drawing.Point(0, 37)
-        Me.LoginPasswordPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.LoginPasswordPanel.Name = "LoginPasswordPanel"
-        Me.LoginPasswordPanel.Size = New System.Drawing.Size(154, 37)
-        Me.LoginPasswordPanel.TabIndex = 12
         '
         'LoginPasswordTextBox
         '
         Me.LoginPasswordTextBox.AutoSize = True
-        Me.LoginPasswordTextBox.Location = New System.Drawing.Point(8, 0)
-        Me.LoginPasswordTextBox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LoginPasswordTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginPasswordTextBox.Location = New System.Drawing.Point(3, 0)
         Me.LoginPasswordTextBox.Name = "LoginPasswordTextBox"
-        Me.LoginPasswordTextBox.Size = New System.Drawing.Size(53, 13)
+        Me.LoginPasswordTextBox.Size = New System.Drawing.Size(167, 39)
         Me.LoginPasswordTextBox.TabIndex = 2
         Me.LoginPasswordTextBox.Text = "Password"
         '
         'PasswordTextBox
         '
-        Me.PasswordTextBox.Location = New System.Drawing.Point(13, 15)
-        Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.PasswordTextBox.Location = New System.Drawing.Point(12, 41)
+        Me.PasswordTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PasswordTextBox.Name = "PasswordTextBox"
         Me.PasswordTextBox.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.PasswordTextBox.Size = New System.Drawing.Size(137, 20)
+        Me.PasswordTextBox.Size = New System.Drawing.Size(225, 22)
         Me.PasswordTextBox.TabIndex = 6
-        '
-        'LoginEmailPanel
-        '
-        Me.LoginEmailPanel.Controls.Add(Me.LoginEmailTextBox)
-        Me.LoginEmailPanel.Controls.Add(Me.EmailTextBox)
-        Me.LoginEmailPanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.LoginEmailPanel.Location = New System.Drawing.Point(0, 0)
-        Me.LoginEmailPanel.Margin = New System.Windows.Forms.Padding(2)
-        Me.LoginEmailPanel.Name = "LoginEmailPanel"
-        Me.LoginEmailPanel.Size = New System.Drawing.Size(154, 37)
-        Me.LoginEmailPanel.TabIndex = 12
         '
         'LoginEmailTextBox
         '
         Me.LoginEmailTextBox.AutoSize = True
-        Me.LoginEmailTextBox.Location = New System.Drawing.Point(8, 0)
-        Me.LoginEmailTextBox.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.LoginEmailTextBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LoginEmailTextBox.Location = New System.Drawing.Point(3, 0)
         Me.LoginEmailTextBox.Name = "LoginEmailTextBox"
-        Me.LoginEmailTextBox.Size = New System.Drawing.Size(32, 13)
+        Me.LoginEmailTextBox.Size = New System.Drawing.Size(103, 39)
         Me.LoginEmailTextBox.TabIndex = 2
         Me.LoginEmailTextBox.Text = "Email"
         '
         'EmailTextBox
         '
-        Me.EmailTextBox.Location = New System.Drawing.Point(13, 15)
-        Me.EmailTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.EmailTextBox.Location = New System.Drawing.Point(12, 41)
+        Me.EmailTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(137, 20)
+        Me.EmailTextBox.Size = New System.Drawing.Size(225, 22)
         Me.EmailTextBox.TabIndex = 6
         '
         'LoginButton
         '
-        Me.LoginButton.Location = New System.Drawing.Point(44, 89)
-        Me.LoginButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.LoginButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LoginButton.Location = New System.Drawing.Point(10, 10)
+        Me.LoginButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.LoginButton.Name = "LoginButton"
-        Me.LoginButton.Size = New System.Drawing.Size(90, 30)
+        Me.LoginButton.Size = New System.Drawing.Size(350, 31)
         Me.LoginButton.TabIndex = 0
         Me.LoginButton.Text = "LOGIN"
         Me.LoginButton.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.LoginEmailTextBox)
+        Me.Panel1.Controls.Add(Me.EmailTextBox)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(370, 100)
+        Me.Panel1.TabIndex = 7
+        '
+        'Panel2
+        '
+        Me.Panel2.Controls.Add(Me.LoginPasswordTextBox)
+        Me.Panel2.Controls.Add(Me.PasswordTextBox)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 100)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(370, 72)
+        Me.Panel2.TabIndex = 8
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.LoginButton)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 192)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(10)
+        Me.Panel3.Size = New System.Drawing.Size(370, 51)
+        Me.Panel3.TabIndex = 9
+        '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(175, 131)
-        Me.Controls.Add(Me.LoginButton)
-        Me.Controls.Add(Me.LoginPanel)
-        Me.Margin = New System.Windows.Forms.Padding(2)
-        Me.MaximumSize = New System.Drawing.Size(191, 170)
-        Me.MinimumSize = New System.Drawing.Size(191, 170)
+        Me.ClientSize = New System.Drawing.Size(370, 243)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.MaximumSize = New System.Drawing.Size(388, 290)
+        Me.MinimumSize = New System.Drawing.Size(388, 290)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login"
-        Me.LoginPanel.ResumeLayout(False)
-        Me.LoginPasswordPanel.ResumeLayout(False)
-        Me.LoginPasswordPanel.PerformLayout()
-        Me.LoginEmailPanel.ResumeLayout(False)
-        Me.LoginEmailPanel.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents LoginPanel As Panel
-    Friend WithEvents LoginEmailPanel As Panel
     Friend WithEvents LoginEmailTextBox As Label
     Friend WithEvents EmailTextBox As TextBox
-    Friend WithEvents LoginPasswordPanel As Panel
     Friend WithEvents LoginPasswordTextBox As Label
     Friend WithEvents PasswordTextBox As TextBox
     Friend WithEvents LoginButton As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
 End Class
