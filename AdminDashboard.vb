@@ -406,6 +406,44 @@ Public Class AdminDashboard
         StaffUpdateButton.Enabled = False
 
     End Sub
+
+    Private Sub ProductsSearchButton_Click(sender As Object, e As EventArgs) Handles ProductsSearchButton.Click
+        Try
+            ' Establish connection to the database
+            conn.Open()
+            ProductList.Rows.Clear()
+
+            Dim q As String = ProductsSearchInput.Text
+
+
+            ' Construct SQL SELECT query
+
+            Dim selectQuery As String = String.Format("SELECT product_id AS Id, name AS Name, price AS Price, quantity AS Quantity, description AS Description FROM products WHERE name LIKE '%{0}%' OR description LIKE '%{0}%';", q)
+
+            Using adapter As New MySqlDataAdapter(selectQuery, conn)
+
+                Dim productDataSet As New DataSet
+                adapter.Fill(productDataSet)
+                If productDataSet.Tables(0).Rows.Count > 0 Then
+                    For Each row As DataRow In productDataSet.Tables(0).Rows
+                        ProductList.Rows.Add(row("Id"), row("Name"), row("Price"), row("Quantity"), row("Description"), "", "Edit", "Delete")
+                    Next
+                End If
+            End Using
+            conn.Close()
+            ProductNameTextBox.Clear()
+            ProductPriceTextBox.Clear()
+            ProductQuantityTextBox.Clear()
+            ProductDescriptionTextBox.Clear()
+
+            ProductList.Visible = True
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading products: " & ex.Message)
+        Finally
+            ' Close the database connection
+            conn.Close()
+        End Try
     Private Sub TellerDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         LoginForm.Show()
     End Sub
