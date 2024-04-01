@@ -252,7 +252,7 @@ Partial Class AdminDashboard
         'ProductQuantityTextBox
         '
         Me.ProductQuantityTextBox.Location = New System.Drawing.Point(80, 95)
-        Me.ProductQuantityTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ProductQuantityTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductQuantityTextBox.Name = "ProductQuantityTextBox"
         Me.ProductQuantityTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductQuantityTextBox.TabIndex = 5
@@ -281,7 +281,7 @@ Partial Class AdminDashboard
         'ProductPriceTextBox
         '
         Me.ProductPriceTextBox.Location = New System.Drawing.Point(80, 59)
-        Me.ProductPriceTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ProductPriceTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductPriceTextBox.Name = "ProductPriceTextBox"
         Me.ProductPriceTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductPriceTextBox.TabIndex = 1
@@ -319,7 +319,7 @@ Partial Class AdminDashboard
         'ProductNameTextBox
         '
         Me.ProductNameTextBox.Location = New System.Drawing.Point(80, 25)
-        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductNameTextBox.Name = "ProductNameTextBox"
         Me.ProductNameTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductNameTextBox.TabIndex = 0
@@ -467,7 +467,7 @@ Partial Class AdminDashboard
         'StaffClearButton
         '
         Me.StaffClearButton.Location = New System.Drawing.Point(583, 92)
-        Me.StaffClearButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.StaffClearButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffClearButton.Name = "StaffClearButton"
         Me.StaffClearButton.Size = New System.Drawing.Size(216, 33)
         Me.StaffClearButton.TabIndex = 9
@@ -478,7 +478,7 @@ Partial Class AdminDashboard
         '
         Me.StaffUpdateButton.Enabled = False
         Me.StaffUpdateButton.Location = New System.Drawing.Point(344, 92)
-        Me.StaffUpdateButton.Margin = New System.Windows.Forms.Padding(4)
+        Me.StaffUpdateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffUpdateButton.Name = "StaffUpdateButton"
         Me.StaffUpdateButton.Size = New System.Drawing.Size(216, 33)
         Me.StaffUpdateButton.TabIndex = 8
@@ -521,9 +521,8 @@ Partial Class AdminDashboard
         Me.StaffRoleComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.StaffRoleComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.StaffRoleComboBox.FormattingEnabled = True
-        Me.StaffRoleComboBox.Items.AddRange(New Object() {"ADMIN", "TELLER"})
         Me.StaffRoleComboBox.Location = New System.Drawing.Point(103, 76)
-        Me.StaffRoleComboBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.StaffRoleComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffRoleComboBox.Name = "StaffRoleComboBox"
         Me.StaffRoleComboBox.Size = New System.Drawing.Size(195, 24)
         Me.StaffRoleComboBox.TabIndex = 4
@@ -531,7 +530,7 @@ Partial Class AdminDashboard
         'StaffEmailTextBox
         '
         Me.StaffEmailTextBox.Location = New System.Drawing.Point(103, 43)
-        Me.StaffEmailTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.StaffEmailTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffEmailTextBox.Name = "StaffEmailTextBox"
         Me.StaffEmailTextBox.Size = New System.Drawing.Size(195, 22)
         Me.StaffEmailTextBox.TabIndex = 3
@@ -539,7 +538,7 @@ Partial Class AdminDashboard
         'StaffNameTextBox
         '
         Me.StaffNameTextBox.Location = New System.Drawing.Point(103, 11)
-        Me.StaffNameTextBox.Margin = New System.Windows.Forms.Padding(4)
+        Me.StaffNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffNameTextBox.Name = "StaffNameTextBox"
         Me.StaffNameTextBox.Size = New System.Drawing.Size(195, 22)
         Me.StaffNameTextBox.TabIndex = 2
