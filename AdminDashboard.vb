@@ -444,6 +444,7 @@ Public Class AdminDashboard
             ' Close the database connection
             conn.Close()
         End Try
+    End Sub
     Private Sub TellerDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         LoginForm.Show()
     End Sub
