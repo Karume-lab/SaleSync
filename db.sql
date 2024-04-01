@@ -17,3 +17,9 @@ CREATE TABLE IF NOT EXISTS staff (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME
 );
+
+CREATE USER salesync@localhost identified by 'salesync';
+
+ALTER USER salesync@localhost identified by 'salesync';
+
+GRANT ALL PRIVILEGES ON *.* TO 'salesync'@'localhost' WITH GRANT OPTION;

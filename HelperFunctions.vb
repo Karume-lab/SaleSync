@@ -2,7 +2,7 @@
 
 Module HelperFunctions
     Public Function GetConnection() As String
-        Dim ConnectionString As String = "server=localhost;port=3306;user=root;password='salesync';database=salesync"
+        Dim ConnectionString As String = "server=localhost;port=3306;user=root;password=root;database=salesync"
         Return ConnectionString
     End Function
 
