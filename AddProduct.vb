@@ -2,7 +2,7 @@
 
 Public Class AddProduct
     Private Sub AddProductToDatabase()
-        Dim ConnectionString As String = "server=localhost;port=3306;user=root;password='root';database=salesync"
+        Dim ConnectionString As String = "server=localhost;port=3306;user=root;password='salesync';database=salesync"
         Dim conn As MySqlConnection
         conn = New MySqlConnection(ConnectionString)
         Try
@@ -43,6 +43,10 @@ Public Class AddProduct
     End Sub
 
     Private Sub AddProduct_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub ProductDescriptionPanel_Paint(sender As Object, e As PaintEventArgs) Handles ProductDescriptionPanel.Paint
 
     End Sub
 End Class
