@@ -92,10 +92,10 @@ Partial Class AdminDashboard
         Me.AdminTabControl.Controls.Add(Me.ReportsTab)
         Me.AdminTabControl.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AdminTabControl.Location = New System.Drawing.Point(0, 0)
-        Me.AdminTabControl.Margin = New System.Windows.Forms.Padding(2)
+        Me.AdminTabControl.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AdminTabControl.Name = "AdminTabControl"
         Me.AdminTabControl.SelectedIndex = 0
-        Me.AdminTabControl.Size = New System.Drawing.Size(764, 377)
+        Me.AdminTabControl.Size = New System.Drawing.Size(1019, 464)
         Me.AdminTabControl.TabIndex = 0
         '
         'ProductsTab
@@ -103,11 +103,11 @@ Partial Class AdminDashboard
         Me.ProductsTab.Controls.Add(Me.AdminBody)
         Me.ProductsTab.Controls.Add(Me.ProductsAdminSidePanel)
         Me.ProductsTab.Controls.Add(Me.ProductsSearchBar)
-        Me.ProductsTab.Location = New System.Drawing.Point(4, 22)
-        Me.ProductsTab.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductsTab.Location = New System.Drawing.Point(4, 25)
+        Me.ProductsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsTab.Name = "ProductsTab"
-        Me.ProductsTab.Padding = New System.Windows.Forms.Padding(2)
-        Me.ProductsTab.Size = New System.Drawing.Size(756, 351)
+        Me.ProductsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ProductsTab.Size = New System.Drawing.Size(1011, 435)
         Me.ProductsTab.TabIndex = 0
         Me.ProductsTab.Text = "PRODUCTS"
         Me.ProductsTab.UseVisualStyleBackColor = True
@@ -116,74 +116,89 @@ Partial Class AdminDashboard
         '
         Me.AdminBody.Controls.Add(Me.ProductList)
         Me.AdminBody.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AdminBody.Location = New System.Drawing.Point(2, 129)
-        Me.AdminBody.Margin = New System.Windows.Forms.Padding(2)
+        Me.AdminBody.Location = New System.Drawing.Point(3, 159)
+        Me.AdminBody.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AdminBody.Name = "AdminBody"
-        Me.AdminBody.Size = New System.Drawing.Size(752, 220)
+        Me.AdminBody.Size = New System.Drawing.Size(1005, 274)
         Me.AdminBody.TabIndex = 3
         '
         'ProductList
         '
         Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdColumn, Me.NameColumn, Me.PriceColumn, Me.QuantityColumn, Me.DescriptionColumn, Me.empty, Me.ProductEditButton, Me.ProductDeleteButton})
-        Me.ProductList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ProductList.Location = New System.Drawing.Point(0, 0)
-        Me.ProductList.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductList.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductList.Name = "ProductList"
         Me.ProductList.RowHeadersWidth = 51
         Me.ProductList.RowTemplate.Height = 24
-        Me.ProductList.Size = New System.Drawing.Size(752, 220)
+        Me.ProductList.Size = New System.Drawing.Size(1005, 274)
         Me.ProductList.TabIndex = 0
         '
         'ProductIdColumn
         '
         Me.ProductIdColumn.Frozen = True
         Me.ProductIdColumn.HeaderText = "Id"
+        Me.ProductIdColumn.MinimumWidth = 6
         Me.ProductIdColumn.Name = "ProductIdColumn"
         Me.ProductIdColumn.ReadOnly = True
         Me.ProductIdColumn.Visible = False
+        Me.ProductIdColumn.Width = 125
         '
         'NameColumn
         '
         Me.NameColumn.Frozen = True
         Me.NameColumn.HeaderText = "Name"
+        Me.NameColumn.MinimumWidth = 6
         Me.NameColumn.Name = "NameColumn"
         Me.NameColumn.ReadOnly = True
+        Me.NameColumn.Width = 125
         '
         'PriceColumn
         '
         Me.PriceColumn.HeaderText = "Price"
+        Me.PriceColumn.MinimumWidth = 6
         Me.PriceColumn.Name = "PriceColumn"
         Me.PriceColumn.ReadOnly = True
+        Me.PriceColumn.Width = 125
         '
         'QuantityColumn
         '
         Me.QuantityColumn.HeaderText = "Quantity"
+        Me.QuantityColumn.MinimumWidth = 6
         Me.QuantityColumn.Name = "QuantityColumn"
         Me.QuantityColumn.ReadOnly = True
+        Me.QuantityColumn.Width = 125
         '
         'DescriptionColumn
         '
         Me.DescriptionColumn.HeaderText = "Description"
+        Me.DescriptionColumn.MinimumWidth = 6
         Me.DescriptionColumn.Name = "DescriptionColumn"
         Me.DescriptionColumn.ReadOnly = True
+        Me.DescriptionColumn.Width = 125
         '
         'empty
         '
         Me.empty.HeaderText = ""
+        Me.empty.MinimumWidth = 6
         Me.empty.Name = "empty"
+        Me.empty.Width = 125
         '
         'ProductEditButton
         '
         Me.ProductEditButton.HeaderText = ""
+        Me.ProductEditButton.MinimumWidth = 6
         Me.ProductEditButton.Name = "ProductEditButton"
         Me.ProductEditButton.Text = "Edit"
+        Me.ProductEditButton.Width = 125
         '
         'ProductDeleteButton
         '
         Me.ProductDeleteButton.HeaderText = ""
+        Me.ProductDeleteButton.MinimumWidth = 6
         Me.ProductDeleteButton.Name = "ProductDeleteButton"
         Me.ProductDeleteButton.Text = "Delete"
+        Me.ProductDeleteButton.Width = 125
         '
         'ProductsAdminSidePanel
         '
@@ -199,18 +214,18 @@ Partial Class AdminDashboard
         Me.ProductsAdminSidePanel.Controls.Add(Me.Label1)
         Me.ProductsAdminSidePanel.Controls.Add(Me.ProductNameTextBox)
         Me.ProductsAdminSidePanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ProductsAdminSidePanel.Location = New System.Drawing.Point(2, 26)
-        Me.ProductsAdminSidePanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductsAdminSidePanel.Location = New System.Drawing.Point(3, 32)
+        Me.ProductsAdminSidePanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsAdminSidePanel.Name = "ProductsAdminSidePanel"
-        Me.ProductsAdminSidePanel.Size = New System.Drawing.Size(752, 103)
+        Me.ProductsAdminSidePanel.Size = New System.Drawing.Size(1005, 127)
         Me.ProductsAdminSidePanel.TabIndex = 2
         '
         'AddProductButton
         '
-        Me.AddProductButton.Location = New System.Drawing.Point(290, 61)
-        Me.AddProductButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddProductButton.Location = New System.Drawing.Point(387, 75)
+        Me.AddProductButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddProductButton.Name = "AddProductButton"
-        Me.AddProductButton.Size = New System.Drawing.Size(149, 29)
+        Me.AddProductButton.Size = New System.Drawing.Size(199, 36)
         Me.AddProductButton.TabIndex = 11
         Me.AddProductButton.Text = "Add Product"
         Me.AddProductButton.UseVisualStyleBackColor = True
@@ -218,34 +233,36 @@ Partial Class AdminDashboard
         'QuantityLabel
         '
         Me.QuantityLabel.AutoSize = True
-        Me.QuantityLabel.Location = New System.Drawing.Point(10, 84)
+        Me.QuantityLabel.Location = New System.Drawing.Point(13, 103)
+        Me.QuantityLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.QuantityLabel.Name = "QuantityLabel"
-        Me.QuantityLabel.Size = New System.Drawing.Size(46, 13)
+        Me.QuantityLabel.Size = New System.Drawing.Size(55, 16)
         Me.QuantityLabel.TabIndex = 10
         Me.QuantityLabel.Text = "Quantity"
         '
         'ProductDescriptionTextBox
         '
-        Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(290, 11)
-        Me.ProductDescriptionTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductDescriptionTextBox.Location = New System.Drawing.Point(387, 14)
+        Me.ProductDescriptionTextBox.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductDescriptionTextBox.Multiline = True
         Me.ProductDescriptionTextBox.Name = "ProductDescriptionTextBox"
-        Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(149, 42)
+        Me.ProductDescriptionTextBox.Size = New System.Drawing.Size(197, 51)
         Me.ProductDescriptionTextBox.TabIndex = 9
         '
         'ProductQuantityTextBox
         '
-        Me.ProductQuantityTextBox.Location = New System.Drawing.Point(60, 77)
+        Me.ProductQuantityTextBox.Location = New System.Drawing.Point(80, 95)
+        Me.ProductQuantityTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductQuantityTextBox.Name = "ProductQuantityTextBox"
-        Me.ProductQuantityTextBox.Size = New System.Drawing.Size(149, 20)
+        Me.ProductQuantityTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductQuantityTextBox.TabIndex = 5
         '
         'ListProducts
         '
-        Me.ListProducts.Location = New System.Drawing.Point(455, 61)
-        Me.ListProducts.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListProducts.Location = New System.Drawing.Point(607, 75)
+        Me.ListProducts.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListProducts.Name = "ListProducts"
-        Me.ListProducts.Size = New System.Drawing.Size(145, 28)
+        Me.ListProducts.Size = New System.Drawing.Size(193, 34)
         Me.ListProducts.TabIndex = 0
         Me.ListProducts.Text = "List of Products"
         Me.ListProducts.UseVisualStyleBackColor = True
@@ -253,53 +270,58 @@ Partial Class AdminDashboard
         'UpdateProductButton
         '
         Me.UpdateProductButton.Enabled = False
-        Me.UpdateProductButton.Location = New System.Drawing.Point(455, 11)
-        Me.UpdateProductButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.UpdateProductButton.Location = New System.Drawing.Point(607, 14)
+        Me.UpdateProductButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.UpdateProductButton.Name = "UpdateProductButton"
-        Me.UpdateProductButton.Size = New System.Drawing.Size(145, 29)
+        Me.UpdateProductButton.Size = New System.Drawing.Size(193, 36)
         Me.UpdateProductButton.TabIndex = 1
         Me.UpdateProductButton.Text = "Update Product"
         Me.UpdateProductButton.UseVisualStyleBackColor = True
         '
         'ProductPriceTextBox
         '
-        Me.ProductPriceTextBox.Location = New System.Drawing.Point(60, 48)
+        Me.ProductPriceTextBox.Location = New System.Drawing.Point(80, 59)
+        Me.ProductPriceTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductPriceTextBox.Name = "ProductPriceTextBox"
-        Me.ProductPriceTextBox.Size = New System.Drawing.Size(149, 20)
+        Me.ProductPriceTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductPriceTextBox.TabIndex = 1
         '
         'PriceLabel
         '
         Me.PriceLabel.AutoSize = True
-        Me.PriceLabel.Location = New System.Drawing.Point(10, 55)
+        Me.PriceLabel.Location = New System.Drawing.Point(13, 68)
+        Me.PriceLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.PriceLabel.Name = "PriceLabel"
-        Me.PriceLabel.Size = New System.Drawing.Size(31, 13)
+        Me.PriceLabel.Size = New System.Drawing.Size(38, 16)
         Me.PriceLabel.TabIndex = 3
         Me.PriceLabel.Text = "Price"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(225, 27)
+        Me.Label2.Location = New System.Drawing.Point(300, 33)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 13)
+        Me.Label2.Size = New System.Drawing.Size(75, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Description"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 27)
+        Me.Label1.Location = New System.Drawing.Point(13, 33)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(35, 13)
+        Me.Label1.Size = New System.Drawing.Size(44, 16)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Name"
         '
         'ProductNameTextBox
         '
-        Me.ProductNameTextBox.Location = New System.Drawing.Point(60, 20)
+        Me.ProductNameTextBox.Location = New System.Drawing.Point(80, 25)
+        Me.ProductNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ProductNameTextBox.Name = "ProductNameTextBox"
-        Me.ProductNameTextBox.Size = New System.Drawing.Size(149, 20)
+        Me.ProductNameTextBox.Size = New System.Drawing.Size(197, 22)
         Me.ProductNameTextBox.TabIndex = 0
         '
         'ProductsSearchBar
@@ -307,20 +329,20 @@ Partial Class AdminDashboard
         Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchButton)
         Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchInput)
         Me.ProductsSearchBar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ProductsSearchBar.Location = New System.Drawing.Point(2, 2)
-        Me.ProductsSearchBar.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductsSearchBar.Location = New System.Drawing.Point(3, 2)
+        Me.ProductsSearchBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchBar.Name = "ProductsSearchBar"
-        Me.ProductsSearchBar.Size = New System.Drawing.Size(752, 24)
+        Me.ProductsSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.ProductsSearchBar.TabIndex = 1
         '
         'ProductsSearchButton
         '
         Me.ProductsSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductsSearchButton.Location = New System.Drawing.Point(202, 3)
-        Me.ProductsSearchButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductsSearchButton.Location = New System.Drawing.Point(269, 4)
+        Me.ProductsSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchButton.Name = "ProductsSearchButton"
-        Me.ProductsSearchButton.Size = New System.Drawing.Size(238, 19)
+        Me.ProductsSearchButton.Size = New System.Drawing.Size(319, 23)
         Me.ProductsSearchButton.TabIndex = 0
         Me.ProductsSearchButton.Text = "SEARCH"
         Me.ProductsSearchButton.UseVisualStyleBackColor = True
@@ -329,10 +351,10 @@ Partial Class AdminDashboard
         '
         Me.ProductsSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductsSearchInput.Location = New System.Drawing.Point(5, 4)
-        Me.ProductsSearchInput.Margin = New System.Windows.Forms.Padding(2)
+        Me.ProductsSearchInput.Location = New System.Drawing.Point(7, 5)
+        Me.ProductsSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchInput.Name = "ProductsSearchInput"
-        Me.ProductsSearchInput.Size = New System.Drawing.Size(323, 20)
+        Me.ProductsSearchInput.Size = New System.Drawing.Size(431, 22)
         Me.ProductsSearchInput.TabIndex = 0
         '
         'StaffTab
@@ -340,11 +362,11 @@ Partial Class AdminDashboard
         Me.StaffTab.Controls.Add(Me.StaffList)
         Me.StaffTab.Controls.Add(Me.StaffAdminSidePanel)
         Me.StaffTab.Controls.Add(Me.StaffSearchBar)
-        Me.StaffTab.Location = New System.Drawing.Point(4, 22)
-        Me.StaffTab.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffTab.Location = New System.Drawing.Point(4, 25)
+        Me.StaffTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffTab.Name = "StaffTab"
-        Me.StaffTab.Padding = New System.Windows.Forms.Padding(2)
-        Me.StaffTab.Size = New System.Drawing.Size(756, 351)
+        Me.StaffTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.StaffTab.Size = New System.Drawing.Size(1011, 435)
         Me.StaffTab.TabIndex = 1
         Me.StaffTab.Text = "STAFF"
         Me.StaffTab.UseVisualStyleBackColor = True
@@ -354,60 +376,74 @@ Partial Class AdminDashboard
         Me.StaffList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.StaffList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Id, Me.StaffName, Me.StaffEmail, Me.StaffRole, Me.StaffEmptyColumn, Me.StaffEditButton, Me.StaffDeleteButton})
         Me.StaffList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.StaffList.Location = New System.Drawing.Point(2, 138)
-        Me.StaffList.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffList.Location = New System.Drawing.Point(3, 170)
+        Me.StaffList.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffList.Name = "StaffList"
         Me.StaffList.RowHeadersWidth = 51
         Me.StaffList.RowTemplate.Height = 24
-        Me.StaffList.Size = New System.Drawing.Size(752, 211)
+        Me.StaffList.Size = New System.Drawing.Size(1005, 263)
         Me.StaffList.TabIndex = 3
         '
         'Id
         '
         Me.Id.Frozen = True
         Me.Id.HeaderText = "StaffId"
+        Me.Id.MinimumWidth = 6
         Me.Id.Name = "Id"
         Me.Id.ReadOnly = True
         Me.Id.Visible = False
+        Me.Id.Width = 125
         '
         'StaffName
         '
         Me.StaffName.Frozen = True
         Me.StaffName.HeaderText = "Name"
+        Me.StaffName.MinimumWidth = 6
         Me.StaffName.Name = "StaffName"
         Me.StaffName.ReadOnly = True
+        Me.StaffName.Width = 125
         '
         'StaffEmail
         '
         Me.StaffEmail.Frozen = True
         Me.StaffEmail.HeaderText = "Email"
+        Me.StaffEmail.MinimumWidth = 6
         Me.StaffEmail.Name = "StaffEmail"
         Me.StaffEmail.ReadOnly = True
+        Me.StaffEmail.Width = 125
         '
         'StaffRole
         '
         Me.StaffRole.Frozen = True
         Me.StaffRole.HeaderText = "Role"
+        Me.StaffRole.MinimumWidth = 6
         Me.StaffRole.Name = "StaffRole"
         Me.StaffRole.ReadOnly = True
+        Me.StaffRole.Width = 125
         '
         'StaffEmptyColumn
         '
         Me.StaffEmptyColumn.Frozen = True
         Me.StaffEmptyColumn.HeaderText = ""
+        Me.StaffEmptyColumn.MinimumWidth = 6
         Me.StaffEmptyColumn.Name = "StaffEmptyColumn"
+        Me.StaffEmptyColumn.Width = 125
         '
         'StaffEditButton
         '
         Me.StaffEditButton.HeaderText = ""
+        Me.StaffEditButton.MinimumWidth = 6
         Me.StaffEditButton.Name = "StaffEditButton"
         Me.StaffEditButton.Text = "Edit"
+        Me.StaffEditButton.Width = 125
         '
         'StaffDeleteButton
         '
         Me.StaffDeleteButton.HeaderText = ""
+        Me.StaffDeleteButton.MinimumWidth = 6
         Me.StaffDeleteButton.Name = "StaffDeleteButton"
         Me.StaffDeleteButton.Text = "Delete"
+        Me.StaffDeleteButton.Width = 125
         '
         'StaffAdminSidePanel
         '
@@ -422,17 +458,18 @@ Partial Class AdminDashboard
         Me.StaffAdminSidePanel.Controls.Add(Me.AddStaff)
         Me.StaffAdminSidePanel.Controls.Add(Me.ListStaffButton)
         Me.StaffAdminSidePanel.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StaffAdminSidePanel.Location = New System.Drawing.Point(2, 26)
-        Me.StaffAdminSidePanel.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffAdminSidePanel.Location = New System.Drawing.Point(3, 32)
+        Me.StaffAdminSidePanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffAdminSidePanel.Name = "StaffAdminSidePanel"
-        Me.StaffAdminSidePanel.Size = New System.Drawing.Size(752, 112)
+        Me.StaffAdminSidePanel.Size = New System.Drawing.Size(1005, 138)
         Me.StaffAdminSidePanel.TabIndex = 5
         '
         'StaffClearButton
         '
-        Me.StaffClearButton.Location = New System.Drawing.Point(437, 75)
+        Me.StaffClearButton.Location = New System.Drawing.Point(583, 92)
+        Me.StaffClearButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffClearButton.Name = "StaffClearButton"
-        Me.StaffClearButton.Size = New System.Drawing.Size(162, 27)
+        Me.StaffClearButton.Size = New System.Drawing.Size(216, 33)
         Me.StaffClearButton.TabIndex = 9
         Me.StaffClearButton.Text = "Clear"
         Me.StaffClearButton.UseVisualStyleBackColor = True
@@ -440,9 +477,10 @@ Partial Class AdminDashboard
         'StaffUpdateButton
         '
         Me.StaffUpdateButton.Enabled = False
-        Me.StaffUpdateButton.Location = New System.Drawing.Point(258, 75)
+        Me.StaffUpdateButton.Location = New System.Drawing.Point(344, 92)
+        Me.StaffUpdateButton.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffUpdateButton.Name = "StaffUpdateButton"
-        Me.StaffUpdateButton.Size = New System.Drawing.Size(162, 27)
+        Me.StaffUpdateButton.Size = New System.Drawing.Size(216, 33)
         Me.StaffUpdateButton.TabIndex = 8
         Me.StaffUpdateButton.Text = "Update"
         Me.StaffUpdateButton.UseVisualStyleBackColor = True
@@ -450,68 +488,74 @@ Partial Class AdminDashboard
         'EmailLabel
         '
         Me.EmailLabel.AutoSize = True
-        Me.EmailLabel.Location = New System.Drawing.Point(9, 42)
+        Me.EmailLabel.Location = New System.Drawing.Point(12, 52)
+        Me.EmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(32, 13)
+        Me.EmailLabel.Size = New System.Drawing.Size(41, 16)
         Me.EmailLabel.TabIndex = 7
         Me.EmailLabel.Text = "Email"
         '
         'RoleLabel
         '
         Me.RoleLabel.AutoSize = True
-        Me.RoleLabel.Location = New System.Drawing.Point(9, 70)
+        Me.RoleLabel.Location = New System.Drawing.Point(12, 86)
+        Me.RoleLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.RoleLabel.Name = "RoleLabel"
-        Me.RoleLabel.Size = New System.Drawing.Size(29, 13)
+        Me.RoleLabel.Size = New System.Drawing.Size(36, 16)
         Me.RoleLabel.TabIndex = 6
         Me.RoleLabel.Text = "Role"
         '
         'NameLabel
         '
         Me.NameLabel.AutoSize = True
-        Me.NameLabel.Location = New System.Drawing.Point(9, 16)
+        Me.NameLabel.Location = New System.Drawing.Point(12, 20)
+        Me.NameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.NameLabel.Name = "NameLabel"
-        Me.NameLabel.Size = New System.Drawing.Size(35, 13)
+        Me.NameLabel.Size = New System.Drawing.Size(44, 16)
         Me.NameLabel.TabIndex = 5
         Me.NameLabel.Text = "Name"
         '
         'StaffRoleComboBox
         '
         Me.StaffRoleComboBox.FormattingEnabled = True
-        Me.StaffRoleComboBox.Location = New System.Drawing.Point(77, 62)
+        Me.StaffRoleComboBox.Location = New System.Drawing.Point(103, 76)
+        Me.StaffRoleComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffRoleComboBox.Name = "StaffRoleComboBox"
-        Me.StaffRoleComboBox.Size = New System.Drawing.Size(147, 21)
+        Me.StaffRoleComboBox.Size = New System.Drawing.Size(195, 24)
         Me.StaffRoleComboBox.TabIndex = 4
         '
         'StaffEmailTextBox
         '
-        Me.StaffEmailTextBox.Location = New System.Drawing.Point(77, 35)
+        Me.StaffEmailTextBox.Location = New System.Drawing.Point(103, 43)
+        Me.StaffEmailTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffEmailTextBox.Name = "StaffEmailTextBox"
-        Me.StaffEmailTextBox.Size = New System.Drawing.Size(147, 20)
+        Me.StaffEmailTextBox.Size = New System.Drawing.Size(195, 22)
         Me.StaffEmailTextBox.TabIndex = 3
         '
         'StaffNameTextBox
         '
-        Me.StaffNameTextBox.Location = New System.Drawing.Point(77, 9)
+        Me.StaffNameTextBox.Location = New System.Drawing.Point(103, 11)
+        Me.StaffNameTextBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.StaffNameTextBox.Name = "StaffNameTextBox"
-        Me.StaffNameTextBox.Size = New System.Drawing.Size(147, 20)
+        Me.StaffNameTextBox.Size = New System.Drawing.Size(195, 22)
         Me.StaffNameTextBox.TabIndex = 2
         '
         'AddStaff
         '
-        Me.AddStaff.Location = New System.Drawing.Point(258, 9)
-        Me.AddStaff.Margin = New System.Windows.Forms.Padding(2)
+        Me.AddStaff.Location = New System.Drawing.Point(344, 11)
+        Me.AddStaff.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.AddStaff.Name = "AddStaff"
-        Me.AddStaff.Size = New System.Drawing.Size(162, 29)
+        Me.AddStaff.Size = New System.Drawing.Size(216, 36)
         Me.AddStaff.TabIndex = 1
         Me.AddStaff.Text = "Add Staff"
         Me.AddStaff.UseVisualStyleBackColor = True
         '
         'ListStaffButton
         '
-        Me.ListStaffButton.Location = New System.Drawing.Point(258, 42)
-        Me.ListStaffButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.ListStaffButton.Location = New System.Drawing.Point(344, 52)
+        Me.ListStaffButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ListStaffButton.Name = "ListStaffButton"
-        Me.ListStaffButton.Size = New System.Drawing.Size(162, 28)
+        Me.ListStaffButton.Size = New System.Drawing.Size(216, 34)
         Me.ListStaffButton.TabIndex = 0
         Me.ListStaffButton.Text = "List of Staff"
         Me.ListStaffButton.UseVisualStyleBackColor = True
@@ -521,20 +565,20 @@ Partial Class AdminDashboard
         Me.StaffSearchBar.Controls.Add(Me.StaffSearchButton)
         Me.StaffSearchBar.Controls.Add(Me.StaffSearchInput)
         Me.StaffSearchBar.Dock = System.Windows.Forms.DockStyle.Top
-        Me.StaffSearchBar.Location = New System.Drawing.Point(2, 2)
-        Me.StaffSearchBar.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffSearchBar.Location = New System.Drawing.Point(3, 2)
+        Me.StaffSearchBar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffSearchBar.Name = "StaffSearchBar"
-        Me.StaffSearchBar.Size = New System.Drawing.Size(752, 24)
+        Me.StaffSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.StaffSearchBar.TabIndex = 4
         '
         'StaffSearchButton
         '
         Me.StaffSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StaffSearchButton.Location = New System.Drawing.Point(333, 2)
-        Me.StaffSearchButton.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffSearchButton.Location = New System.Drawing.Point(444, 2)
+        Me.StaffSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffSearchButton.Name = "StaffSearchButton"
-        Me.StaffSearchButton.Size = New System.Drawing.Size(237, 19)
+        Me.StaffSearchButton.Size = New System.Drawing.Size(318, 23)
         Me.StaffSearchButton.TabIndex = 0
         Me.StaffSearchButton.Text = "SEARCH"
         Me.StaffSearchButton.UseVisualStyleBackColor = True
@@ -543,30 +587,30 @@ Partial Class AdminDashboard
         '
         Me.StaffSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.StaffSearchInput.Location = New System.Drawing.Point(169, 2)
-        Me.StaffSearchInput.Margin = New System.Windows.Forms.Padding(2)
+        Me.StaffSearchInput.Location = New System.Drawing.Point(225, 2)
+        Me.StaffSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffSearchInput.Name = "StaffSearchInput"
-        Me.StaffSearchInput.Size = New System.Drawing.Size(323, 20)
+        Me.StaffSearchInput.Size = New System.Drawing.Size(431, 22)
         Me.StaffSearchInput.TabIndex = 0
         '
         'ReportsTab
         '
-        Me.ReportsTab.Location = New System.Drawing.Point(4, 22)
-        Me.ReportsTab.Margin = New System.Windows.Forms.Padding(2)
+        Me.ReportsTab.Location = New System.Drawing.Point(4, 25)
+        Me.ReportsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ReportsTab.Name = "ReportsTab"
-        Me.ReportsTab.Padding = New System.Windows.Forms.Padding(2)
-        Me.ReportsTab.Size = New System.Drawing.Size(756, 351)
+        Me.ReportsTab.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ReportsTab.Size = New System.Drawing.Size(1011, 435)
         Me.ReportsTab.TabIndex = 2
         Me.ReportsTab.Text = "REPORTS"
         Me.ReportsTab.UseVisualStyleBackColor = True
         '
         'AdminDashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(764, 377)
+        Me.ClientSize = New System.Drawing.Size(1019, 464)
         Me.Controls.Add(Me.AdminTabControl)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AdminDashboard"
         Me.Text = "ADMIN DASHBOARD"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized

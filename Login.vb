@@ -3,7 +3,7 @@ Imports MySqlConnector
 
 Public Class LoginForm
 
-    Dim ConnectionString As String = "server=localhost;port=3306;user=root;password='salesync';database=salesync"
+    Dim ConnectionString As String = "server=localhost;port=3306;user=root;password=root;database=salesync"
     Dim conn As New MySqlConnection(ConnectionString)
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles LoginPasswordTextBox.Click
@@ -22,8 +22,8 @@ Public Class LoginForm
                 conn.Open()
                 MessageBox.Show(conn.State.ToString())
 
-                Dim email As String = "e@gmail.com"
-                Dim password As String = "Ephraim"
+                Dim email As String = EmailTextBox.Text
+                Dim password As String = PasswordTextBox.Text
                 Dim salt As String = password & email
 
 
@@ -64,6 +64,7 @@ Public Class LoginForm
             MessageBox.Show("Please enter a valid email address", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Return
         End If
+
     End Sub
 
     Private Sub EmailTextBox_TextChanged(sender As Object, e As EventArgs) Handles EmailTextBox.TextChanged
