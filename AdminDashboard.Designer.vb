@@ -126,7 +126,6 @@ Partial Class AdminDashboard
         '
         Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdColumn, Me.NameColumn, Me.PriceColumn, Me.QuantityColumn, Me.DescriptionColumn, Me.empty, Me.ProductEditButton, Me.ProductDeleteButton})
-        Me.ProductList.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ProductList.Location = New System.Drawing.Point(0, 0)
         Me.ProductList.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductList.Name = "ProductList"
@@ -518,6 +517,9 @@ Partial Class AdminDashboard
         '
         'StaffRoleComboBox
         '
+        Me.StaffRoleComboBox.AutoCompleteCustomSource.AddRange(New String() {"ADMIN", "TELLER"})
+        Me.StaffRoleComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.StaffRoleComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.StaffRoleComboBox.FormattingEnabled = True
         Me.StaffRoleComboBox.Location = New System.Drawing.Point(103, 76)
         Me.StaffRoleComboBox.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
