@@ -27,7 +27,7 @@ Public Class LoginForm
                 Dim salt As String = password & email
 
 
-                Dim selectQuery As String = "SELECT password FROM staff WHERE email = @email "
+                Dim selectQuery As String = "SELECT password, role FROM staff WHERE email = @email "
 
 
                 Using command As New MySqlCommand(selectQuery, conn)
@@ -37,8 +37,10 @@ Public Class LoginForm
                         If reader.HasRows Then
                             reader.Read()
                             Dim storedHash As String = reader.GetString(0)
+                            Dim role As String = reader.GetString(1)
 
                             Dim passwordMatches As Boolean = VerifyPassword(salt, storedHash)
+                            
 
                             If passwordMatches Then
                                 ' MessageBox.Show("Login successful!")
@@ -46,9 +48,15 @@ Public Class LoginForm
                                 PasswordTextBox.Clear()
                                 Me.Hide()
                                 Dim adminDashboard As New AdminDashboard()
-                                adminDashboard.Show()
+                                Dim tellerDashboard As New TellerDashboard()
+                                If role = "ADMIN" Then
+                                    adminDashboard.Show()
+                                Else
+                                    tellerDashboard.Show()
+                                End If
+
                             Else
-                                MessageBox.Show("Invalid email or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                                    MessageBox.Show("Invalid email or password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
                             End If
                         Else
                             MessageBox.Show("No user found")
