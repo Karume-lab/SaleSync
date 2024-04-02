@@ -124,6 +124,9 @@ Partial Class AdminDashboard
         '
         'ProductList
         '
+        Me.ProductList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.ProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdColumn, Me.NameColumn, Me.PriceColumn, Me.QuantityColumn, Me.DescriptionColumn, Me.empty, Me.ProductEditButton, Me.ProductDeleteButton})
         Me.ProductList.Location = New System.Drawing.Point(0, 0)

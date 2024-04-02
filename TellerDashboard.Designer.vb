@@ -38,13 +38,16 @@ Partial Class TellerDashboard
         Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.btnCheckout = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.dgridProducts, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.Controls.Add(Me.lblDate)
         Me.Panel1.Controls.Add(Me.lblName)
         Me.Panel1.Location = New System.Drawing.Point(-1, -1)
@@ -55,20 +58,24 @@ Partial Class TellerDashboard
         'lblDate
         '
         Me.lblDate.AutoSize = True
-        Me.lblDate.Location = New System.Drawing.Point(767, 10)
+        Me.lblDate.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Location = New System.Drawing.Point(543, 0)
         Me.lblDate.Name = "lblDate"
-        Me.lblDate.Size = New System.Drawing.Size(71, 16)
+        Me.lblDate.Size = New System.Drawing.Size(163, 39)
         Me.lblDate.TabIndex = 1
-        Me.lblDate.Text = "21/11/2024"
+        Me.lblDate.Text = "John Doe"
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(665, 10)
+        Me.lblName.Dock = System.Windows.Forms.DockStyle.Right
+        Me.lblName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblName.Location = New System.Drawing.Point(706, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(65, 16)
+        Me.lblName.Size = New System.Drawing.Size(187, 39)
         Me.lblName.TabIndex = 0
-        Me.lblName.Text = "John Doe"
+        Me.lblName.Text = "21/11/2024"
         '
         'Panel2
         '
@@ -84,9 +91,10 @@ Partial Class TellerDashboard
         '
         'btnAddProduct
         '
-        Me.btnAddProduct.Location = New System.Drawing.Point(259, 54)
+        Me.btnAddProduct.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddProduct.Location = New System.Drawing.Point(236, 49)
         Me.btnAddProduct.Name = "btnAddProduct"
-        Me.btnAddProduct.Size = New System.Drawing.Size(75, 23)
+        Me.btnAddProduct.Size = New System.Drawing.Size(113, 33)
         Me.btnAddProduct.TabIndex = 4
         Me.btnAddProduct.Text = "Add"
         Me.btnAddProduct.UseVisualStyleBackColor = True
@@ -126,6 +134,10 @@ Partial Class TellerDashboard
         '
         'dgridProducts
         '
+        Me.dgridProducts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgridProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgridProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgridProducts.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Product, Me.Price, Me.Quantity, Me.Total})
         Me.dgridProducts.Location = New System.Drawing.Point(-1, 136)
@@ -141,7 +153,6 @@ Partial Class TellerDashboard
         Me.Product.MinimumWidth = 6
         Me.Product.Name = "Product"
         Me.Product.ReadOnly = True
-        Me.Product.Width = 125
         '
         'Price
         '
@@ -149,7 +160,6 @@ Partial Class TellerDashboard
         Me.Price.MinimumWidth = 6
         Me.Price.Name = "Price"
         Me.Price.ReadOnly = True
-        Me.Price.Width = 125
         '
         'Quantity
         '
@@ -157,7 +167,6 @@ Partial Class TellerDashboard
         Me.Quantity.MinimumWidth = 6
         Me.Quantity.Name = "Quantity"
         Me.Quantity.ReadOnly = True
-        Me.Quantity.Width = 125
         '
         'Total
         '
@@ -165,33 +174,46 @@ Partial Class TellerDashboard
         Me.Total.MinimumWidth = 6
         Me.Total.Name = "Total"
         Me.Total.ReadOnly = True
-        Me.Total.Width = 125
         '
         'btnCheckout
         '
-        Me.btnCheckout.Location = New System.Drawing.Point(694, 390)
+        Me.btnCheckout.Dock = System.Windows.Forms.DockStyle.Right
+        Me.btnCheckout.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCheckout.Location = New System.Drawing.Point(741, 20)
         Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheckout.Size = New System.Drawing.Size(132, 40)
         Me.btnCheckout.TabIndex = 3
         Me.btnCheckout.Text = "Checkout"
         Me.btnCheckout.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(791, 390)
+        Me.btnCancel.Dock = System.Windows.Forms.DockStyle.Left
+        Me.btnCancel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancel.Location = New System.Drawing.Point(20, 20)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.Size = New System.Drawing.Size(123, 40)
         Me.btnCancel.TabIndex = 4
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.btnCheckout)
+        Me.Panel3.Controls.Add(Me.btnCancel)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel3.Location = New System.Drawing.Point(0, 359)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(20)
+        Me.Panel3.Size = New System.Drawing.Size(893, 80)
+        Me.Panel3.TabIndex = 5
         '
         'TellerDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(893, 439)
-        Me.Controls.Add(Me.btnCancel)
-        Me.Controls.Add(Me.btnCheckout)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.dgridProducts)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -202,6 +224,7 @@ Partial Class TellerDashboard
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.dgridProducts, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -222,4 +245,5 @@ Partial Class TellerDashboard
     Friend WithEvents btnAddProduct As Button
     Friend WithEvents btnCheckout As Button
     Friend WithEvents btnCancel As Button
+    Friend WithEvents Panel3 As Panel
 End Class
