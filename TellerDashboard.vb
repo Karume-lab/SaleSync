@@ -7,7 +7,6 @@ Public Class TellerDashboard
     Dim conn As New MySqlConnection(GetConnection)
 
     Private productDictionary As New Dictionary(Of Integer, String)()
-
     Private Sub LoadProductItems()
         Try
             ' Establish connection to the database
@@ -103,6 +102,17 @@ Public Class TellerDashboard
                 End Using
             Next
 
+            ' Construct SQL UPDATE query to update total price of the sale
+            Dim updateQuery As String = "UPDATE sale SET total_price = @totalPrice WHERE sale_id = @saleId"
+
+            Using command As New MySqlCommand(updateQuery, conn)
+                command.Parameters.AddWithValue("@totalPrice", CalculateTotalPriceFromGrid())
+                command.Parameters.AddWithValue("@saleId", saleId)
+
+                ' Execute the query
+                command.ExecuteNonQuery()
+            End Using
+
             MessageBox.Show("Sale recorded successfully!")
         Catch ex As Exception
             MessageBox.Show("Error recording sale: " & ex.Message)
@@ -180,6 +190,20 @@ Public Class TellerDashboard
         End Try
         Return price
     End Function
+
+    Private Function CalculateTotalPriceFromGrid() As Decimal
+        Dim totalPrice As Decimal = 0
+
+        For Each row As DataGridViewRow In dgridProducts.Rows
+            If Not row.IsNewRow Then
+                Dim total As Decimal = CDec(row.Cells(3).Value)
+                totalPrice += total
+            End If
+        Next
+
+        Return totalPrice
+    End Function
+
 
 
     Private Sub TellerDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
