@@ -448,4 +448,8 @@ Public Class AdminDashboard
     Private Sub TellerDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         LoginForm.Show()
     End Sub
+
+    Private Sub StaffAdminSidePanel_Paint(sender As Object, e As PaintEventArgs) Handles StaffAdminSidePanel.Paint
+
+    End Sub
 End Class

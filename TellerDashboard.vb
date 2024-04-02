@@ -33,4 +33,7 @@
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
 
     End Sub
+    Private Sub AdminDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        LoginForm.Show()
+    End Sub
 End Class

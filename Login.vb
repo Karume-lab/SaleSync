@@ -42,6 +42,8 @@ Public Class LoginForm
 
                             If passwordMatches Then
                                 ' MessageBox.Show("Login successful!")
+                                EmailTextBox.Clear()
+                                PasswordTextBox.Clear()
                                 Me.Hide()
                                 Dim adminDashboard As New AdminDashboard()
                                 adminDashboard.Show()
