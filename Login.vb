@@ -20,8 +20,6 @@ Public Class LoginForm
 
             Try
                 conn.Open()
-                MessageBox.Show(conn.State.ToString())
-
                 Dim email As String = EmailTextBox.Text
                 Dim password As String = PasswordTextBox.Text
                 Dim salt As String = password & email
