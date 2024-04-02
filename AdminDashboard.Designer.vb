@@ -337,21 +337,17 @@ Partial Class AdminDashboard
         '
         'ProductsSearchButton
         '
-        Me.ProductsSearchButton.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ProductsSearchButton.Location = New System.Drawing.Point(303, 4)
         Me.ProductsSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchButton.Name = "ProductsSearchButton"
-        Me.ProductsSearchButton.Size = New System.Drawing.Size(89, 23)
+        Me.ProductsSearchButton.Size = New System.Drawing.Size(89, 26)
         Me.ProductsSearchButton.TabIndex = 0
         Me.ProductsSearchButton.Text = "SEARCH"
         Me.ProductsSearchButton.UseVisualStyleBackColor = True
         '
         'ProductsSearchInput
         '
-        Me.ProductsSearchInput.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductsSearchInput.Location = New System.Drawing.Point(16, 8)
+        Me.ProductsSearchInput.Location = New System.Drawing.Point(16, 6)
         Me.ProductsSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchInput.Name = "ProductsSearchInput"
         Me.ProductsSearchInput.Size = New System.Drawing.Size(270, 22)
