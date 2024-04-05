@@ -72,6 +72,7 @@ Partial Class AdminDashboard
         Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
@@ -534,6 +535,7 @@ Partial Class AdminDashboard
         '
         'StaffSearchBar
         '
+        Me.StaffSearchBar.Controls.Add(Me.Label4)
         Me.StaffSearchBar.Controls.Add(Me.StaffSearchInput)
         Me.StaffSearchBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.StaffSearchBar.Location = New System.Drawing.Point(3, 2)
@@ -544,7 +546,7 @@ Partial Class AdminDashboard
         '
         'StaffSearchInput
         '
-        Me.StaffSearchInput.Location = New System.Drawing.Point(5, 2)
+        Me.StaffSearchInput.Location = New System.Drawing.Point(81, 4)
         Me.StaffSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.StaffSearchInput.Name = "StaffSearchInput"
         Me.StaffSearchInput.Size = New System.Drawing.Size(293, 22)
@@ -569,6 +571,15 @@ Partial Class AdminDashboard
         Me.Label3.Size = New System.Drawing.Size(63, 16)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "SEARCH"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 7)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 16)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "SEARCH"
         '
         'AdminDashboard
         '
@@ -648,4 +659,5 @@ Partial Class AdminDashboard
     Friend WithEvents ProductEditButton As DataGridViewButtonColumn
     Friend WithEvents ProductDeleteButton As DataGridViewButtonColumn
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

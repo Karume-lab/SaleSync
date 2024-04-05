@@ -481,7 +481,7 @@ Public Class AdminDashboard
             ProductQuantityTextBox.Clear()
             ProductDescriptionTextBox.Clear()
 
-            ProductList.Visible = True
+            StaffList.Visible = True
 
         Catch ex As Exception
             MessageBox.Show("Error loading products: " & ex.Message)
@@ -515,11 +515,6 @@ Public Class AdminDashboard
                 End If
             End Using
             conn.Close()
-            ProductNameTextBox.Clear()
-            ProductPriceTextBox.Clear()
-            ProductQuantityTextBox.Clear()
-            ProductDescriptionTextBox.Clear()
-
             ProductList.Visible = True
 
         Catch ex As Exception
@@ -554,12 +549,8 @@ Public Class AdminDashboard
                 End If
             End Using
             conn.Close()
-            ProductNameTextBox.Clear()
-            ProductPriceTextBox.Clear()
-            ProductQuantityTextBox.Clear()
-            ProductDescriptionTextBox.Clear()
 
-            ProductList.Visible = True
+            StaffList.Visible = True
 
         Catch ex As Exception
             MessageBox.Show("Error loading products: " & ex.Message)
