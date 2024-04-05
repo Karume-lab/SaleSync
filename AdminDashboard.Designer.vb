@@ -71,6 +71,7 @@ Partial Class AdminDashboard
         Me.StaffSearchBar = New System.Windows.Forms.Panel()
         Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
@@ -318,6 +319,7 @@ Partial Class AdminDashboard
         '
         'ProductsSearchBar
         '
+        Me.ProductsSearchBar.Controls.Add(Me.Label3)
         Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchInput)
         Me.ProductsSearchBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.ProductsSearchBar.Location = New System.Drawing.Point(3, 2)
@@ -328,7 +330,7 @@ Partial Class AdminDashboard
         '
         'ProductsSearchInput
         '
-        Me.ProductsSearchInput.Location = New System.Drawing.Point(16, 6)
+        Me.ProductsSearchInput.Location = New System.Drawing.Point(78, 5)
         Me.ProductsSearchInput.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ProductsSearchInput.Name = "ProductsSearchInput"
         Me.ProductsSearchInput.Size = New System.Drawing.Size(270, 22)
@@ -559,6 +561,15 @@ Partial Class AdminDashboard
         Me.ReportsTab.Text = "REPORTS"
         Me.ReportsTab.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 8)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 16)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "SEARCH"
+        '
         'AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -636,4 +647,5 @@ Partial Class AdminDashboard
     Friend WithEvents empty As DataGridViewTextBoxColumn
     Friend WithEvents ProductEditButton As DataGridViewButtonColumn
     Friend WithEvents ProductDeleteButton As DataGridViewButtonColumn
+    Friend WithEvents Label3 As Label
 End Class
