@@ -406,7 +406,7 @@ Public Class AdminDashboard
 
     End Sub
 
-    Private Sub ProductsSearchButton_Click(sender As Object, e As EventArgs) Handles ProductsSearchButton.Click
+    Private Sub ProductsSearchButton_Click(sender As Object, e As EventArgs)
         Try
             ' Establish connection to the database
             conn.Open()
@@ -453,14 +453,84 @@ Public Class AdminDashboard
     End Sub
 
     Private Sub StaffSearchInput_TextChanged(sender As Object, e As EventArgs) Handles StaffSearchInput.TextChanged
+        Try
+            ' Establish connection to the database
+            conn.Open()
+            StaffList.Rows.Clear()
 
+            Dim q As String = StaffSearchInput.Text
+
+
+            ' Construct SQL SELECT query
+
+            Dim selectQuery As String = String.Format("SELECT name AS Name, email AS Email, role AS Role FROM staff WHERE name LIKE '%{0}%';", q)
+
+            Using adapter As New MySqlDataAdapter(selectQuery, conn)
+
+                Dim staffDataSet As New DataSet
+                adapter.Fill(staffDataSet)
+                If staffDataSet.Tables(0).Rows.Count > 0 Then
+                    For Each row As DataRow In staffDataSet.Tables(0).Rows
+                        StaffList.Rows.Add(row("Name"), row("Email"), row("Role"), "", "Edit", "Delete")
+                    Next
+                End If
+            End Using
+            conn.Close()
+            ProductNameTextBox.Clear()
+            ProductPriceTextBox.Clear()
+            ProductQuantityTextBox.Clear()
+            ProductDescriptionTextBox.Clear()
+
+            ProductList.Visible = True
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading products: " & ex.Message)
+        Finally
+            ' Close the database connection
+            conn.Close()
+        End Try
     End Sub
 
     Private Sub ProductsSearchInput_TextChanged(sender As Object, e As EventArgs) Handles ProductsSearchInput.TextChanged
+        Try
+            ' Establish connection to the database
+            conn.Open()
+            ProductList.Rows.Clear()
 
+            Dim q As String = ProductsSearchInput.Text
+
+
+            ' Construct SQL SELECT query
+
+            Dim selectQuery As String = String.Format("SELECT product_id AS Id, name AS Name, price AS Price, quantity AS Quantity, description AS Description FROM products WHERE name LIKE '%{0}%' OR description LIKE '%{0}%';", q)
+
+            Using adapter As New MySqlDataAdapter(selectQuery, conn)
+
+                Dim productDataSet As New DataSet
+                adapter.Fill(productDataSet)
+                If productDataSet.Tables(0).Rows.Count > 0 Then
+                    For Each row As DataRow In productDataSet.Tables(0).Rows
+                        ProductList.Rows.Add(row("Id"), row("Name"), row("Price"), row("Quantity"), row("Description"), "", "Edit", "Delete")
+                    Next
+                End If
+            End Using
+            conn.Close()
+            ProductNameTextBox.Clear()
+            ProductPriceTextBox.Clear()
+            ProductQuantityTextBox.Clear()
+            ProductDescriptionTextBox.Clear()
+
+            ProductList.Visible = True
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading products: " & ex.Message)
+        Finally
+            ' Close the database connection
+            conn.Close()
+        End Try
     End Sub
 
-    Private Sub StaffSearchButton_Click(sender As Object, e As EventArgs) Handles StaffSearchButton.Click
+    Private Sub StaffSearchButton_Click(sender As Object, e As EventArgs)
         Try
             ' Establish connection to the database
             conn.Open()

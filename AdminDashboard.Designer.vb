@@ -25,6 +25,15 @@ Partial Class AdminDashboard
         Me.AdminTabControl = New System.Windows.Forms.TabControl()
         Me.ProductsTab = New System.Windows.Forms.TabPage()
         Me.AdminBody = New System.Windows.Forms.Panel()
+        Me.ProductList = New System.Windows.Forms.DataGridView()
+        Me.ProductIdColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.NameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.PriceColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.QuantityColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DescriptionColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.empty = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ProductEditButton = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.ProductDeleteButton = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ProductsAdminSidePanel = New System.Windows.Forms.Panel()
         Me.AddProductButton = New System.Windows.Forms.Button()
         Me.QuantityLabel = New System.Windows.Forms.Label()
@@ -38,7 +47,6 @@ Partial Class AdminDashboard
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProductNameTextBox = New System.Windows.Forms.TextBox()
         Me.ProductsSearchBar = New System.Windows.Forms.Panel()
-        Me.ProductsSearchButton = New System.Windows.Forms.Button()
         Me.ProductsSearchInput = New System.Windows.Forms.TextBox()
         Me.StaffTab = New System.Windows.Forms.TabPage()
         Me.StaffList = New System.Windows.Forms.DataGridView()
@@ -61,28 +69,18 @@ Partial Class AdminDashboard
         Me.AddStaff = New System.Windows.Forms.Button()
         Me.ListStaffButton = New System.Windows.Forms.Button()
         Me.StaffSearchBar = New System.Windows.Forms.Panel()
-        Me.StaffSearchButton = New System.Windows.Forms.Button()
         Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
-        Me.ProductDeleteButton = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.ProductEditButton = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.empty = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DescriptionColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.QuantityColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PriceColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.NameColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductIdColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ProductList = New System.Windows.Forms.DataGridView()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
+        CType(Me.ProductList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ProductsAdminSidePanel.SuspendLayout()
         Me.ProductsSearchBar.SuspendLayout()
         Me.StaffTab.SuspendLayout()
         CType(Me.StaffList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StaffAdminSidePanel.SuspendLayout()
         Me.StaffSearchBar.SuspendLayout()
-        CType(Me.ProductList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AdminTabControl
@@ -121,6 +119,78 @@ Partial Class AdminDashboard
         Me.AdminBody.Name = "AdminBody"
         Me.AdminBody.Size = New System.Drawing.Size(1005, 274)
         Me.AdminBody.TabIndex = 3
+        '
+        'ProductList
+        '
+        Me.ProductList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.ProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdColumn, Me.NameColumn, Me.PriceColumn, Me.QuantityColumn, Me.DescriptionColumn, Me.empty, Me.ProductEditButton, Me.ProductDeleteButton})
+        Me.ProductList.Location = New System.Drawing.Point(0, 0)
+        Me.ProductList.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.ProductList.Name = "ProductList"
+        Me.ProductList.RowHeadersWidth = 51
+        Me.ProductList.RowTemplate.Height = 24
+        Me.ProductList.Size = New System.Drawing.Size(1005, 274)
+        Me.ProductList.TabIndex = 0
+        '
+        'ProductIdColumn
+        '
+        Me.ProductIdColumn.HeaderText = "Id"
+        Me.ProductIdColumn.MinimumWidth = 6
+        Me.ProductIdColumn.Name = "ProductIdColumn"
+        Me.ProductIdColumn.ReadOnly = True
+        Me.ProductIdColumn.Visible = False
+        '
+        'NameColumn
+        '
+        Me.NameColumn.HeaderText = "Name"
+        Me.NameColumn.MinimumWidth = 6
+        Me.NameColumn.Name = "NameColumn"
+        Me.NameColumn.ReadOnly = True
+        '
+        'PriceColumn
+        '
+        Me.PriceColumn.HeaderText = "Price"
+        Me.PriceColumn.MinimumWidth = 6
+        Me.PriceColumn.Name = "PriceColumn"
+        Me.PriceColumn.ReadOnly = True
+        '
+        'QuantityColumn
+        '
+        Me.QuantityColumn.HeaderText = "Quantity"
+        Me.QuantityColumn.MinimumWidth = 6
+        Me.QuantityColumn.Name = "QuantityColumn"
+        Me.QuantityColumn.ReadOnly = True
+        '
+        'DescriptionColumn
+        '
+        Me.DescriptionColumn.HeaderText = "Description"
+        Me.DescriptionColumn.MinimumWidth = 6
+        Me.DescriptionColumn.Name = "DescriptionColumn"
+        Me.DescriptionColumn.ReadOnly = True
+        '
+        'empty
+        '
+        Me.empty.HeaderText = ""
+        Me.empty.MinimumWidth = 6
+        Me.empty.Name = "empty"
+        '
+        'ProductEditButton
+        '
+        Me.ProductEditButton.HeaderText = ""
+        Me.ProductEditButton.MinimumWidth = 6
+        Me.ProductEditButton.Name = "ProductEditButton"
+        Me.ProductEditButton.Text = "Edit"
+        '
+        'ProductDeleteButton
+        '
+        Me.ProductDeleteButton.HeaderText = ""
+        Me.ProductDeleteButton.MinimumWidth = 6
+        Me.ProductDeleteButton.Name = "ProductDeleteButton"
+        Me.ProductDeleteButton.Text = "Delete"
         '
         'ProductsAdminSidePanel
         '
@@ -186,7 +256,7 @@ Partial Class AdminDashboard
         Me.ListProducts.Name = "ListProducts"
         Me.ListProducts.Size = New System.Drawing.Size(193, 34)
         Me.ListProducts.TabIndex = 0
-        Me.ListProducts.Text = " "
+        Me.ListProducts.Text = " List all products"
         Me.ListProducts.UseVisualStyleBackColor = True
         '
         'UpdateProductButton
@@ -248,7 +318,6 @@ Partial Class AdminDashboard
         '
         'ProductsSearchBar
         '
-        Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchButton)
         Me.ProductsSearchBar.Controls.Add(Me.ProductsSearchInput)
         Me.ProductsSearchBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.ProductsSearchBar.Location = New System.Drawing.Point(3, 2)
@@ -256,16 +325,6 @@ Partial Class AdminDashboard
         Me.ProductsSearchBar.Name = "ProductsSearchBar"
         Me.ProductsSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.ProductsSearchBar.TabIndex = 1
-        '
-        'ProductsSearchButton
-        '
-        Me.ProductsSearchButton.Location = New System.Drawing.Point(303, 4)
-        Me.ProductsSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ProductsSearchButton.Name = "ProductsSearchButton"
-        Me.ProductsSearchButton.Size = New System.Drawing.Size(89, 26)
-        Me.ProductsSearchButton.TabIndex = 0
-        Me.ProductsSearchButton.Text = "SEARCH"
-        Me.ProductsSearchButton.UseVisualStyleBackColor = True
         '
         'ProductsSearchInput
         '
@@ -473,7 +532,6 @@ Partial Class AdminDashboard
         '
         'StaffSearchBar
         '
-        Me.StaffSearchBar.Controls.Add(Me.StaffSearchButton)
         Me.StaffSearchBar.Controls.Add(Me.StaffSearchInput)
         Me.StaffSearchBar.Dock = System.Windows.Forms.DockStyle.Top
         Me.StaffSearchBar.Location = New System.Drawing.Point(3, 2)
@@ -481,16 +539,6 @@ Partial Class AdminDashboard
         Me.StaffSearchBar.Name = "StaffSearchBar"
         Me.StaffSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.StaffSearchBar.TabIndex = 4
-        '
-        'StaffSearchButton
-        '
-        Me.StaffSearchButton.Location = New System.Drawing.Point(344, 2)
-        Me.StaffSearchButton.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.StaffSearchButton.Name = "StaffSearchButton"
-        Me.StaffSearchButton.Size = New System.Drawing.Size(104, 22)
-        Me.StaffSearchButton.TabIndex = 0
-        Me.StaffSearchButton.Text = "SEARCH"
-        Me.StaffSearchButton.UseVisualStyleBackColor = True
         '
         'StaffSearchInput
         '
@@ -511,78 +559,6 @@ Partial Class AdminDashboard
         Me.ReportsTab.Text = "REPORTS"
         Me.ReportsTab.UseVisualStyleBackColor = True
         '
-        'ProductDeleteButton
-        '
-        Me.ProductDeleteButton.HeaderText = ""
-        Me.ProductDeleteButton.MinimumWidth = 6
-        Me.ProductDeleteButton.Name = "ProductDeleteButton"
-        Me.ProductDeleteButton.Text = "Delete"
-        '
-        'ProductEditButton
-        '
-        Me.ProductEditButton.HeaderText = ""
-        Me.ProductEditButton.MinimumWidth = 6
-        Me.ProductEditButton.Name = "ProductEditButton"
-        Me.ProductEditButton.Text = "Edit"
-        '
-        'empty
-        '
-        Me.empty.HeaderText = ""
-        Me.empty.MinimumWidth = 6
-        Me.empty.Name = "empty"
-        '
-        'DescriptionColumn
-        '
-        Me.DescriptionColumn.HeaderText = "Description"
-        Me.DescriptionColumn.MinimumWidth = 6
-        Me.DescriptionColumn.Name = "DescriptionColumn"
-        Me.DescriptionColumn.ReadOnly = True
-        '
-        'QuantityColumn
-        '
-        Me.QuantityColumn.HeaderText = "Quantity"
-        Me.QuantityColumn.MinimumWidth = 6
-        Me.QuantityColumn.Name = "QuantityColumn"
-        Me.QuantityColumn.ReadOnly = True
-        '
-        'PriceColumn
-        '
-        Me.PriceColumn.HeaderText = "Price"
-        Me.PriceColumn.MinimumWidth = 6
-        Me.PriceColumn.Name = "PriceColumn"
-        Me.PriceColumn.ReadOnly = True
-        '
-        'NameColumn
-        '
-        Me.NameColumn.HeaderText = "Name"
-        Me.NameColumn.MinimumWidth = 6
-        Me.NameColumn.Name = "NameColumn"
-        Me.NameColumn.ReadOnly = True
-        '
-        'ProductIdColumn
-        '
-        Me.ProductIdColumn.HeaderText = "Id"
-        Me.ProductIdColumn.MinimumWidth = 6
-        Me.ProductIdColumn.Name = "ProductIdColumn"
-        Me.ProductIdColumn.ReadOnly = True
-        Me.ProductIdColumn.Visible = False
-        '
-        'ProductList
-        '
-        Me.ProductList.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.ProductList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIdColumn, Me.NameColumn, Me.PriceColumn, Me.QuantityColumn, Me.DescriptionColumn, Me.empty, Me.ProductEditButton, Me.ProductDeleteButton})
-        Me.ProductList.Location = New System.Drawing.Point(0, 0)
-        Me.ProductList.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.ProductList.Name = "ProductList"
-        Me.ProductList.RowHeadersWidth = 51
-        Me.ProductList.RowTemplate.Height = 24
-        Me.ProductList.Size = New System.Drawing.Size(1005, 274)
-        Me.ProductList.TabIndex = 0
-        '
         'AdminDashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -596,6 +572,7 @@ Partial Class AdminDashboard
         Me.AdminTabControl.ResumeLayout(False)
         Me.ProductsTab.ResumeLayout(False)
         Me.AdminBody.ResumeLayout(False)
+        CType(Me.ProductList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ProductsAdminSidePanel.ResumeLayout(False)
         Me.ProductsAdminSidePanel.PerformLayout()
         Me.ProductsSearchBar.ResumeLayout(False)
@@ -606,7 +583,6 @@ Partial Class AdminDashboard
         Me.StaffAdminSidePanel.PerformLayout()
         Me.StaffSearchBar.ResumeLayout(False)
         Me.StaffSearchBar.PerformLayout()
-        CType(Me.ProductList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -618,7 +594,6 @@ Partial Class AdminDashboard
     Friend WithEvents ProductsSearchBar As Panel
     Friend WithEvents ProductsSearchInput As TextBox
     Friend WithEvents ProductsAdminSidePanel As Panel
-    Friend WithEvents ProductsSearchButton As Button
     Friend WithEvents StaffList As DataGridView
     Friend WithEvents StaffAdminSidePanel As Panel
     Friend WithEvents AddStaff As Button
@@ -644,7 +619,6 @@ Partial Class AdminDashboard
     Friend WithEvents StaffClearButton As Button
     Friend WithEvents AddProductButton As Button
     Friend WithEvents StaffSearchBar As Panel
-    Friend WithEvents StaffSearchButton As Button
     Friend WithEvents StaffSearchInput As TextBox
     Friend WithEvents Id As DataGridViewTextBoxColumn
     Friend WithEvents StaffName As DataGridViewTextBoxColumn
