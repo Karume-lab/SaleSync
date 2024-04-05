@@ -2,7 +2,6 @@
 Imports MySqlConnector
 
 Public Class LoginForm
-
     Dim ConnectionString As String = "server=localhost;port=3306;user=root;password=root;database=salesync"
     Dim conn As New MySqlConnection(ConnectionString)
 
@@ -25,7 +24,7 @@ Public Class LoginForm
                 Dim salt As String = password & email
 
 
-                Dim selectQuery As String = "SELECT password, role FROM staff WHERE email = @email "
+                Dim selectQuery As String = "SELECT password, role, name FROM staff WHERE email = @email "
 
 
                 Using command As New MySqlCommand(selectQuery, conn)
@@ -36,6 +35,7 @@ Public Class LoginForm
                             reader.Read()
                             Dim storedHash As String = reader.GetString(0)
                             Dim role As String = reader.GetString(1)
+                            Dim username = reader.GetString(2)
 
                             Dim passwordMatches As Boolean = VerifyPassword(salt, storedHash)
                             
@@ -44,6 +44,7 @@ Public Class LoginForm
                                 ' MessageBox.Show("Login successful!")
                                 EmailTextBox.Clear()
                                 PasswordTextBox.Clear()
+                                loggedInUser = username
                                 Me.Hide()
                                 Dim adminDashboard As New AdminDashboard()
                                 Dim tellerDashboard As New TellerDashboard()

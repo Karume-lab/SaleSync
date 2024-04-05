@@ -1,7 +1,6 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySqlConnector
 
-
 Public Class TellerDashboard
 
     Dim conn As New MySqlConnection(GetConnection)
@@ -38,6 +37,7 @@ Public Class TellerDashboard
             ' Close the database connection
             conn.Close()
         End Try
+
     End Sub
 
     Private Sub InsertSale()
@@ -48,7 +48,7 @@ Public Class TellerDashboard
             ' Declare variables for sale details
             Dim dateOfPurchase As DateTime = DateTime.Now
             Dim totalPrice As Decimal = 0 ' Set the total price
-            Dim servedBy As Integer = 2 ' Set the staff ID who served the sale
+            Dim servedBy As Integer = 4 ' Set the staff ID who served the sale
 
             ' Construct SQL INSERT query for sale
             Dim insertSaleQuery As String = "INSERT INTO sale (date_of_purchase, total_price, served_by, updated_at) VALUES (@date_of_purchase, @total_price, @served_by, @updated_at); SELECT LAST_INSERT_ID();"
@@ -112,7 +112,6 @@ Public Class TellerDashboard
                 ' Execute the query
                 command.ExecuteNonQuery()
             End Using
-
             MessageBox.Show("Sale recorded successfully!")
         Catch ex As Exception
             MessageBox.Show("Error recording sale: " & ex.Message)
@@ -208,7 +207,8 @@ Public Class TellerDashboard
 
     Private Sub TellerDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadProductItems()
-
+        lblUser.Text = loggedInUser
+        lblDate.Text = Date.Now()
     End Sub
     Private Sub TellerDashboard_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         LoginForm.Show()
@@ -236,7 +236,28 @@ Public Class TellerDashboard
         dgridProducts.Rows.Add(productName, price, quantity, Total)
     End Sub
 
-    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+    Private Sub btnCheckout_Click(sender As Object, e As EventArgs)
         InsertSale()
+        dgridProducts.Rows.Clear()
+    End Sub
+
+    Private Sub lblDate_Click(sender As Object, e As EventArgs) Handles lblUser.Click
+
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs)
+        dgridProducts.Rows.Clear()
+    End Sub
+
+    Private Sub lblProduct_Click(sender As Object, e As EventArgs) Handles lblProduct.Click
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub dgridProducts_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgridProducts.CellContentClick
+
     End Sub
 End Class

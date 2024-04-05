@@ -37,15 +37,14 @@ Public Class AdminDashboard
                 End If
             End Using
             conn.Close()
-            ProductNameTextBox.Clear()
-            ProductPriceTextBox.Clear()
-            ProductQuantityTextBox.Clear()
-            ProductDescriptionTextBox.Clear()
+            StaffNameTextBox.Clear()
+            StaffEmailTextBox.Clear()
+            StaffRoleComboBox.Text = ""
 
-            ProductList.Visible = True
+            StaffList.Visible = True
 
         Catch ex As Exception
-            MessageBox.Show("Error loading products: " & ex.Message)
+            MessageBox.Show("Error loading staff: " & ex.Message)
         Finally
             ' Close the database connection
             conn.Close()
@@ -54,6 +53,7 @@ Public Class AdminDashboard
 
     Private Sub ListProducts_Click(sender As Object, e As EventArgs) Handles ListProducts.Click
         LoadProducts()
+        ProductList.Visible = True
     End Sub
 
 
@@ -367,7 +367,6 @@ Public Class AdminDashboard
             Dim updatedAt As DateTime = DateTime.Now
             Dim hashedPwd As String = HashPassword(staffName, staffEmail)
 
-            MessageBox.Show(StaffId)
 
             ' Construct SQL UPDATE query with parameters for staff
             Dim updateQuery As String = "UPDATE staff SET name = @name, email=@email, role = @role, password = @pwd, updated_at = @updatedAt WHERE staff_id = @staffId"
@@ -451,5 +450,52 @@ Public Class AdminDashboard
 
     Private Sub StaffAdminSidePanel_Paint(sender As Object, e As PaintEventArgs) Handles StaffAdminSidePanel.Paint
 
+    End Sub
+
+    Private Sub StaffSearchInput_TextChanged(sender As Object, e As EventArgs) Handles StaffSearchInput.TextChanged
+
+    End Sub
+
+    Private Sub ProductsSearchInput_TextChanged(sender As Object, e As EventArgs) Handles ProductsSearchInput.TextChanged
+
+    End Sub
+
+    Private Sub StaffSearchButton_Click(sender As Object, e As EventArgs) Handles StaffSearchButton.Click
+        Try
+            ' Establish connection to the database
+            conn.Open()
+            StaffList.Rows.Clear()
+
+            Dim q As String = StaffSearchInput.Text
+
+
+            ' Construct SQL SELECT query
+
+            Dim selectQuery As String = String.Format("SELECT name AS Name, email AS Email, role AS Role FROM staff WHERE name LIKE '%{0}%';", q)
+
+            Using adapter As New MySqlDataAdapter(selectQuery, conn)
+
+                Dim staffDataSet As New DataSet
+                adapter.Fill(staffDataSet)
+                If staffDataSet.Tables(0).Rows.Count > 0 Then
+                    For Each row As DataRow In staffDataSet.Tables(0).Rows
+                        StaffList.Rows.Add(row("Name"), row("Email"), row("Role"), "", "Edit", "Delete")
+                    Next
+                End If
+            End Using
+            conn.Close()
+            ProductNameTextBox.Clear()
+            ProductPriceTextBox.Clear()
+            ProductQuantityTextBox.Clear()
+            ProductDescriptionTextBox.Clear()
+
+            ProductList.Visible = True
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading products: " & ex.Message)
+        Finally
+            ' Close the database connection
+            conn.Close()
+        End Try
     End Sub
 End Class
