@@ -6,6 +6,11 @@ Public Class TellerDashboard
     Dim conn As New MySqlConnection(GetConnection)
 
     Private productDictionary As New Dictionary(Of Integer, String)()
+    Private sumTotal As Double = 0
+    Private Const TAX_RATE As Double = 0.16
+    Private Const DISCOUNT_RATE As Double = 0.03
+    Private Const MIN_DISCOUNT_AMOUNT As Double = 1000
+
     Private Sub LoadProductItems()
         Try
             ' Establish connection to the database
@@ -234,6 +239,34 @@ Public Class TellerDashboard
         Dim Total As Double = price * quantity
 
         dgridProducts.Rows.Add(productName, price, quantity, Total)
+        updateTotals(Total)
+    End Sub
+
+    Private Sub updateTotals(ByVal total As Double)
+
+        ' Declare variables for discount, grand total, tax, and net total
+        Dim discount As Double = 0
+        Dim grandTotal As Double = 0
+
+        ' Calculate the tax and net total
+        Dim tax As Double = TAX_RATE * sumTotal
+        Dim netTotal As Double = sumTotal - tax
+
+        ' Calculate the discount if the total price is greater than the minimum discount amount
+        If sumTotal > MIN_DISCOUNT_AMOUNT Then
+            discount = DISCOUNT_RATE * sumTotal
+        End If
+
+        ' Update the total price
+        sumTotal += total
+        grandTotal = sumTotal - discount
+
+        ' Update the labels with the new values
+        lblGrandTotal.Text = "Ksh. " & grandTotal
+        lblTax.Text = "Ksh. " & tax
+        lblDiscount.Text = "Ksh. " & discount
+        lblNetTotal.Text = "Ksh. " & netTotal
+
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs)
@@ -241,16 +274,8 @@ Public Class TellerDashboard
         dgridProducts.Rows.Clear()
     End Sub
 
-    Private Sub lblDate_Click(sender As Object, e As EventArgs) Handles lblUser.Click
-
-    End Sub
-
     Private Sub btnCancel_Click(sender As Object, e As EventArgs)
         dgridProducts.Rows.Clear()
-    End Sub
-
-    Private Sub lblProduct_Click(sender As Object, e As EventArgs) Handles lblProduct.Click
-
     End Sub
 
     Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
@@ -260,4 +285,5 @@ Public Class TellerDashboard
     Private Sub dgridProducts_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgridProducts.CellContentClick
 
     End Sub
+
 End Class
