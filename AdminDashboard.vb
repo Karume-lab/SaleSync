@@ -3,6 +3,8 @@ Imports System.Text.RegularExpressions
 Imports System.Threading
 Imports MySqlConnector
 Imports Mysqlx.Resultset
+Imports Microsoft.Reporting.WinForms
+Imports Org.BouncyCastle.Asn1.X500
 
 Public Class AdminDashboard
 
@@ -14,7 +16,7 @@ Public Class AdminDashboard
     Private Sub AdminDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ProductList.Visible = False
         StaffList.Visible = False
-
+        LoadReport()
     End Sub
 
     Private Sub LoadProducts()
@@ -559,4 +561,47 @@ Public Class AdminDashboard
             conn.Close()
         End Try
     End Sub
+
+    Sub LoadReport()
+        Dim rptDS As ReportDataSource
+        Me.ReportViewer1.RefreshReport()
+        Try
+            With ReportViewer1.LocalReport
+                '.ReportPath = "ReportSales.rdlc"
+                .DataSources.Clear()
+            End With
+            Dim ds As New DataSet1
+            Dim da As New MySqlDataAdapter()
+            Dim conn As New MySqlConnection(GetConnection) ' Assuming GetConnectionString() returns the connection string
+
+            conn.Open()
+            da.SelectCommand = New MySqlCommand(
+                "SELECT " &
+                        "s.sale_id AS sale_id, " &
+                        "p.name AS product, " &
+                        "p.price AS unit_price," &
+                        "si.quantity AS quantity, " &
+                        "s.total_price AS total_price, " &
+                        "s.date_of_purchase AS date_of_purchase, " &
+                        "st.name AS served_by " &
+                    "FROM " &
+                        "sale AS s " &
+                    "INNER JOIN " &
+                        "sale_item AS si ON s.sale_id = si.sale " &
+                    "INNER JOIN " &
+                        "products AS p ON si.product = p.product_id " &
+                    "INNER JOIN " &
+                        "staff AS st ON s.served_by = st.staff_id;", conn)
+            da.Fill(ds.Tables("Sales"))
+            rptDS = New ReportDataSource("DataSet1", ds.Tables("Sales"))
+            Me.ReportViewer1.LocalReport.DataSources.Clear()
+            Me.ReportViewer1.LocalReport.DataSources.Add(rptDS)
+            Me.ReportViewer1.RefreshReport()
+        Catch ex As Exception
+            MessageBox.Show("Error" & ex.Message)
+        Finally
+            conn.Close()
+        End Try
+    End Sub
+
 End Class
