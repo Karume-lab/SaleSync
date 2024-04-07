@@ -47,6 +47,7 @@ Partial Class AdminDashboard
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ProductNameTextBox = New System.Windows.Forms.TextBox()
         Me.ProductsSearchBar = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ProductsSearchInput = New System.Windows.Forms.TextBox()
         Me.StaffTab = New System.Windows.Forms.TabPage()
         Me.StaffList = New System.Windows.Forms.DataGridView()
@@ -69,10 +70,10 @@ Partial Class AdminDashboard
         Me.AddStaff = New System.Windows.Forms.Button()
         Me.ListStaffButton = New System.Windows.Forms.Button()
         Me.StaffSearchBar = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.StaffSearchInput = New System.Windows.Forms.TextBox()
         Me.ReportsTab = New System.Windows.Forms.TabPage()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.AdminTabControl.SuspendLayout()
         Me.ProductsTab.SuspendLayout()
         Me.AdminBody.SuspendLayout()
@@ -83,6 +84,7 @@ Partial Class AdminDashboard
         CType(Me.StaffList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StaffAdminSidePanel.SuspendLayout()
         Me.StaffSearchBar.SuspendLayout()
+        Me.ReportsTab.SuspendLayout()
         Me.SuspendLayout()
         '
         'AdminTabControl
@@ -329,6 +331,15 @@ Partial Class AdminDashboard
         Me.ProductsSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.ProductsSearchBar.TabIndex = 1
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(9, 8)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 16)
+        Me.Label3.TabIndex = 1
+        Me.Label3.Text = "SEARCH"
+        '
         'ProductsSearchInput
         '
         Me.ProductsSearchInput.Location = New System.Drawing.Point(78, 5)
@@ -544,6 +555,15 @@ Partial Class AdminDashboard
         Me.StaffSearchBar.Size = New System.Drawing.Size(1005, 30)
         Me.StaffSearchBar.TabIndex = 4
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 7)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 16)
+        Me.Label4.TabIndex = 2
+        Me.Label4.Text = "SEARCH"
+        '
         'StaffSearchInput
         '
         Me.StaffSearchInput.Location = New System.Drawing.Point(81, 4)
@@ -554,6 +574,7 @@ Partial Class AdminDashboard
         '
         'ReportsTab
         '
+        Me.ReportsTab.Controls.Add(Me.ReportViewer1)
         Me.ReportsTab.Location = New System.Drawing.Point(4, 25)
         Me.ReportsTab.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ReportsTab.Name = "ReportsTab"
@@ -563,23 +584,15 @@ Partial Class AdminDashboard
         Me.ReportsTab.Text = "REPORTS"
         Me.ReportsTab.UseVisualStyleBackColor = True
         '
-        'Label3
+        'ReportViewer1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(9, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(63, 16)
-        Me.Label3.TabIndex = 1
-        Me.Label3.Text = "SEARCH"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 7)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(63, 16)
-        Me.Label4.TabIndex = 2
-        Me.Label4.Text = "SEARCH"
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SaleSync.Report1.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(3, 2)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(1005, 431)
+        Me.ReportViewer1.TabIndex = 0
         '
         'AdminDashboard
         '
@@ -605,6 +618,7 @@ Partial Class AdminDashboard
         Me.StaffAdminSidePanel.PerformLayout()
         Me.StaffSearchBar.ResumeLayout(False)
         Me.StaffSearchBar.PerformLayout()
+        Me.ReportsTab.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -660,4 +674,5 @@ Partial Class AdminDashboard
     Friend WithEvents ProductDeleteButton As DataGridViewButtonColumn
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer
 End Class

@@ -53,7 +53,7 @@ Public Class TellerDashboard
             ' Declare variables for sale details
             Dim dateOfPurchase As DateTime = DateTime.Now
             Dim totalPrice As Decimal = 0 ' Set the total price
-            Dim servedBy As Integer = 4 ' Set the staff ID who served the sale
+            Dim servedBy As Integer = 1 ' Set the staff ID who served the sale
 
             ' Construct SQL INSERT query for sale
             Dim insertSaleQuery As String = "INSERT INTO sale (date_of_purchase, total_price, served_by, updated_at) VALUES (@date_of_purchase, @total_price, @served_by, @updated_at); SELECT LAST_INSERT_ID();"
@@ -272,18 +272,15 @@ Public Class TellerDashboard
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs)
         InsertSale()
         dgridProducts.Rows.Clear()
+
     End Sub
 
     Private Sub btnCancel_Click(sender As Object, e As EventArgs)
         dgridProducts.Rows.Clear()
     End Sub
 
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
-
+    Private Sub btnCheckout_Click_1(sender As Object, e As EventArgs) Handles btnCheckout.Click
+        InsertSale()
+        dgridProducts.Rows.Clear()
     End Sub
-
-    Private Sub dgridProducts_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgridProducts.CellContentClick
-
-    End Sub
-
 End Class
